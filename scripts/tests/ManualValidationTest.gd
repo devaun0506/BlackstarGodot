@@ -28,28 +28,24 @@ func _ready():
 func test_menuscene_compilation():
 	print("\n🔧 Testing MenuScene Compilation...")
 	
-	try:
-		var script = load("res://scripts/ui/MenuScene.gd")
-		if script:
-			print("✅ MenuScene.gd compiles successfully")
-			
-			# Try to create an instance
-			var temp_instance = script.new()
-			if temp_instance:
-				print("✅ MenuScene script can be instantiated")
-				temp_instance.queue_free()
-			else:
-				print("❌ MenuScene script instantiation failed")
+	var script = load("res://scripts/ui/MenuScene.gd")
+	if script:
+		print("✅ MenuScene.gd compiles successfully")
+		
+		# Try to create an instance
+		var temp_instance = script.new()
+		if temp_instance:
+			print("✅ MenuScene script can be instantiated")
+			temp_instance.queue_free()
 		else:
-			print("❌ MenuScene.gd failed to load")
-			
-	except Exception as e:
-		print("❌ MenuScene compilation error: " + str(e))
+			print("❌ MenuScene script instantiation failed")
+	else:
+		print("❌ MenuScene.gd failed to load")
 
 func test_medical_colors():
 	print("\n🎨 Testing Medical Colors...")
 	
-	try:
+	#
 		# Try loading MedicalColors script
 		if ResourceLoader.exists("res://scripts/ui/medical_theme/MedicalColors.gd"):
 			var colors_script = load("res://scripts/ui/medical_theme/MedicalColors.gd")
@@ -74,13 +70,11 @@ func test_medical_colors():
 		else:
 			print("❌ MedicalColors.gd file not found")
 			
-	except Exception as e:
-		print("❌ Medical colors test error: " + str(e))
 
 func test_medical_fonts():
 	print("\n🔤 Testing Medical Fonts...")
 	
-	try:
+	#
 		# Try loading MedicalFont script
 		if ResourceLoader.exists("res://scripts/ui/medical_theme/MedicalFont.gd"):
 			var fonts_script = load("res://scripts/ui/medical_theme/MedicalFont.gd")
@@ -108,13 +102,11 @@ func test_medical_fonts():
 		else:
 			print("❌ MedicalFont.gd file not found")
 			
-	except Exception as e:
-		print("❌ Medical fonts test error: " + str(e))
 
 func test_scene_loading():
 	print("\n🎬 Testing Scene Loading...")
 	
-	try:
+	#
 		# Test if MenuScene.tscn exists and loads
 		if ResourceLoader.exists("res://scenes/MenuScene.tscn"):
 			var scene_resource = load("res://scenes/MenuScene.tscn")
@@ -144,8 +136,6 @@ func test_scene_loading():
 		else:
 			print("❌ MenuScene.tscn file not found")
 			
-	except Exception as e:
-		print("❌ Scene loading test error: " + str(e))
 
 func test_ui_elements(scene_instance):
 	print("\n🖥️ Testing UI Elements...")

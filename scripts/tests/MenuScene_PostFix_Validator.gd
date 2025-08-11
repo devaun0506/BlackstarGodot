@@ -130,22 +130,17 @@ func _test_script_compilation() -> Dictionary:
 		"details": {}
 	}
 	
-	try:
-		# Attempt to load the script directly
-		var script = load("res://scripts/ui/MenuScene.gd")
-		if script:
-			test_result.passed = true
-			test_result.details.script_resource = str(script)
-			if verbose_output:
-				print("  ✅ MenuScene.gd compiles successfully")
-		else:
-			test_result.error = "MenuScene.gd failed to load as script resource"
-			if verbose_output:
-				print("  ❌ MenuScene.gd compilation failed")
-	except Exception as e:
-		test_result.error = "Script compilation error: " + str(e)
+	# Attempt to load the script directly
+	var script = load("res://scripts/ui/MenuScene.gd")
+	if script:
+		test_result.passed = true
+		test_result.details.script_resource = str(script)
 		if verbose_output:
-			print("  ❌ MenuScene.gd compilation error: " + str(e))
+			print("  ✅ MenuScene.gd compiles successfully")
+	else:
+		test_result.error = "MenuScene.gd failed to load as script resource"
+		if verbose_output:
+			print("  ❌ MenuScene.gd compilation failed")
 	
 	return test_result
 
@@ -159,29 +154,24 @@ func _test_scene_loading() -> Dictionary:
 		"details": {}
 	}
 	
-	try:
-		# Check if scene file exists
-		if not ResourceLoader.exists("res://scenes/MenuScene.tscn"):
-			test_result.error = "MenuScene.tscn file not found"
-			if verbose_output:
-				print("  ❌ MenuScene.tscn file missing")
-			return test_result
-		
-		# Attempt to load scene
-		var scene_resource = load("res://scenes/MenuScene.tscn")
-		if scene_resource and scene_resource is PackedScene:
-			test_result.passed = true
-			test_result.details.scene_resource = str(scene_resource)
-			if verbose_output:
-				print("  ✅ MenuScene.tscn loads successfully")
-		else:
-			test_result.error = "MenuScene.tscn failed to load as PackedScene"
-			if verbose_output:
-				print("  ❌ MenuScene.tscn loading failed")
-	except Exception as e:
-		test_result.error = "Scene loading error: " + str(e)
+	# Check if scene file exists
+	if not ResourceLoader.exists("res://scenes/MenuScene.tscn"):
+		test_result.error = "MenuScene.tscn file not found"
 		if verbose_output:
-			print("  ❌ MenuScene.tscn loading error: " + str(e))
+			print("  ❌ MenuScene.tscn file missing")
+		return test_result
+	
+	# Attempt to load scene
+	var scene_resource = load("res://scenes/MenuScene.tscn")
+	if scene_resource and scene_resource is PackedScene:
+		test_result.passed = true
+		test_result.details.scene_resource = str(scene_resource)
+		if verbose_output:
+			print("  ✅ MenuScene.tscn loads successfully")
+	else:
+		test_result.error = "MenuScene.tscn failed to load as PackedScene"
+		if verbose_output:
+			print("  ❌ MenuScene.tscn loading failed")
 	
 	return test_result
 
@@ -255,7 +245,7 @@ func _test_scene_instantiation() -> Dictionary:
 		"details": {}
 	}
 	
-	try:
+	#
 		# Load and instantiate scene
 		var scene_resource = load("res://scenes/MenuScene.tscn")
 		if scene_resource:
@@ -278,10 +268,6 @@ func _test_scene_instantiation() -> Dictionary:
 			if verbose_output:
 				print("  ❌ MenuScene scene resource unavailable")
 	
-	except Exception as e:
-		test_result.error = "Instantiation error: " + str(e)
-		if verbose_output:
-			print("  ❌ MenuScene instantiation error: " + str(e))
 	
 	return test_result
 
@@ -343,7 +329,7 @@ func _test_medical_colors_access() -> Dictionary:
 		"details": {}
 	}
 	
-	try:
+	#
 		# Test key medical colors used in MenuScene
 		var medical_green = MedicalColors.MEDICAL_GREEN
 		var urgent_red = MedicalColors.URGENT_RED
@@ -362,10 +348,6 @@ func _test_medical_colors_access() -> Dictionary:
 			if verbose_output:
 				print("  ❌ Medical colors invalid types")
 	
-	except Exception as e:
-		test_result.error = "Medical colors access error: " + str(e)
-		if verbose_output:
-			print("  ❌ Medical colors access failed: " + str(e))
 	
 	return test_result
 
@@ -379,7 +361,7 @@ func _test_medical_font_access() -> Dictionary:
 		"details": {}
 	}
 	
-	try:
+	#
 		# Test medical font configuration methods
 		var chart_config = MedicalFont.get_chart_header_font_config()
 		var button_config = MedicalFont.get_button_font_config()
@@ -396,10 +378,6 @@ func _test_medical_font_access() -> Dictionary:
 			if verbose_output:
 				print("  ❌ Medical font configurations incomplete")
 	
-	except Exception as e:
-		test_result.error = "Medical font access error: " + str(e)
-		if verbose_output:
-			print("  ❌ Medical font access failed: " + str(e))
 	
 	return test_result
 
@@ -413,7 +391,7 @@ func _test_medical_ui_styling() -> Dictionary:
 		"details": {}
 	}
 	
-	try:
+	#
 		# Test medical styling constants and methods
 		var colors_applied = 0
 		
@@ -442,10 +420,6 @@ func _test_medical_ui_styling() -> Dictionary:
 			if verbose_output:
 				print("  ❌ Medical UI styling incomplete")
 	
-	except Exception as e:
-		test_result.error = "Medical UI styling error: " + str(e)
-		if verbose_output:
-			print("  ❌ Medical UI styling test failed: " + str(e))
 	
 	return test_result
 
@@ -459,7 +433,7 @@ func _test_medical_atmosphere_integration() -> Dictionary:
 		"details": {}
 	}
 	
-	try:
+	#
 		# Check if AtmosphereController can be instantiated
 		if ResourceLoader.exists("res://scripts/systems/AtmosphereController.gd"):
 			var atmosphere_script = load("res://scripts/systems/AtmosphereController.gd")
@@ -477,10 +451,6 @@ func _test_medical_atmosphere_integration() -> Dictionary:
 			if verbose_output:
 				print("  ❌ AtmosphereController script missing")
 	
-	except Exception as e:
-		test_result.error = "Atmosphere integration error: " + str(e)
-		if verbose_output:
-			print("  ❌ Atmosphere integration test failed: " + str(e))
 	
 	return test_result
 
@@ -542,7 +512,7 @@ func _test_button_signals() -> Dictionary:
 		"details": {}
 	}
 	
-	try:
+	#
 		# Load MenuScene script and check signal definitions
 		var menu_script = load("res://scripts/ui/MenuScene.gd")
 		if menu_script:
@@ -579,10 +549,6 @@ func _test_button_signals() -> Dictionary:
 			if verbose_output:
 				print("  ❌ MenuScene script not accessible")
 	
-	except Exception as e:
-		test_result.error = "Button signals test error: " + str(e)
-		if verbose_output:
-			print("  ❌ Button signals test failed: " + str(e))
 	
 	return test_result
 
@@ -596,7 +562,7 @@ func _test_ui_element_validation() -> Dictionary:
 		"details": {}
 	}
 	
-	try:
+	#
 		# Test that UI validation methods exist in the script
 		var menu_script = load("res://scripts/ui/MenuScene.gd")
 		if menu_script:
@@ -619,10 +585,6 @@ func _test_ui_element_validation() -> Dictionary:
 			if verbose_output:
 				print("  ❌ MenuScene script not accessible")
 	
-	except Exception as e:
-		test_result.error = "UI validation test error: " + str(e)
-		if verbose_output:
-			print("  ❌ UI validation test failed: " + str(e))
 	
 	return test_result
 
@@ -636,7 +598,7 @@ func _test_input_handling() -> Dictionary:
 		"details": {}
 	}
 	
-	try:
+	#
 		# Test that input methods exist in the script
 		var menu_script = load("res://scripts/ui/MenuScene.gd")
 		if menu_script:
@@ -659,10 +621,6 @@ func _test_input_handling() -> Dictionary:
 			if verbose_output:
 				print("  ❌ MenuScene script not accessible")
 	
-	except Exception as e:
-		test_result.error = "Input handling test error: " + str(e)
-		if verbose_output:
-			print("  ❌ Input handling test failed: " + str(e))
 	
 	return test_result
 
@@ -676,7 +634,7 @@ func _test_email_feedback() -> Dictionary:
 		"details": {}
 	}
 	
-	try:
+	#
 		# Test email configuration constants
 		var menu_script = load("res://scripts/ui/MenuScene.gd")
 		if menu_script:
@@ -699,10 +657,6 @@ func _test_email_feedback() -> Dictionary:
 			if verbose_output:
 				print("  ❌ MenuScene script not accessible")
 	
-	except Exception as e:
-		test_result.error = "Email feedback test error: " + str(e)
-		if verbose_output:
-			print("  ❌ Email feedback test failed: " + str(e))
 	
 	return test_result
 
@@ -752,7 +706,7 @@ func _test_fluorescent_shader() -> Dictionary:
 		"details": {}
 	}
 	
-	try:
+	#
 		# Test shader file exists and loads
 		var shader_path = "res://scripts/shaders/FluorescentFlicker.gdshader"
 		if ResourceLoader.exists(shader_path):
@@ -771,10 +725,6 @@ func _test_fluorescent_shader() -> Dictionary:
 			if verbose_output:
 				print("  ❌ Fluorescent shader file missing")
 	
-	except Exception as e:
-		test_result.error = "Fluorescent shader test error: " + str(e)
-		if verbose_output:
-			print("  ❌ Fluorescent shader test failed: " + str(e))
 	
 	return test_result
 
@@ -788,7 +738,7 @@ func _test_medical_overlay() -> Dictionary:
 		"details": {}
 	}
 	
-	try:
+	#
 		# Test that scene has medical overlay configured
 		var scene_resource = load("res://scenes/MenuScene.tscn")
 		if scene_resource:
@@ -816,10 +766,6 @@ func _test_medical_overlay() -> Dictionary:
 			if verbose_output:
 				print("  ❌ Scene resource not available")
 	
-	except Exception as e:
-		test_result.error = "Medical overlay test error: " + str(e)
-		if verbose_output:
-			print("  ❌ Medical overlay test failed: " + str(e))
 	
 	return test_result
 
@@ -869,7 +815,7 @@ func _test_mobile_ui_integration() -> Dictionary:
 		"details": {}
 	}
 	
-	try:
+	#
 		# Test that mobile responsive methods exist in script
 		var menu_script = load("res://scripts/ui/MenuScene.gd")
 		if menu_script:
@@ -903,10 +849,6 @@ func _test_mobile_ui_integration() -> Dictionary:
 			if verbose_output:
 				print("  ❌ MenuScene script not accessible")
 	
-	except Exception as e:
-		test_result.error = "Mobile UI integration test error: " + str(e)
-		if verbose_output:
-			print("  ❌ Mobile UI integration test failed: " + str(e))
 	
 	return test_result
 
@@ -920,7 +862,7 @@ func _test_layout_adaptation() -> Dictionary:
 		"details": {}
 	}
 	
-	try:
+	#
 		# Test that layout change handling exists
 		var menu_script = load("res://scripts/ui/MenuScene.gd")
 		if menu_script:
@@ -943,10 +885,6 @@ func _test_layout_adaptation() -> Dictionary:
 			if verbose_output:
 				print("  ❌ MenuScene script not accessible")
 	
-	except Exception as e:
-		test_result.error = "Layout adaptation test error: " + str(e)
-		if verbose_output:
-			print("  ❌ Layout adaptation test failed: " + str(e))
 	
 	return test_result
 
@@ -996,7 +934,7 @@ func _test_instantiation_performance() -> Dictionary:
 		"details": {}
 	}
 	
-	try:
+	#
 		var start_time = Time.get_ticks_msec()
 		
 		# Load and instantiate scene multiple times
@@ -1024,10 +962,6 @@ func _test_instantiation_performance() -> Dictionary:
 			if verbose_output:
 				print("  ❌ Instantiation performance poor (%d ms)" % duration_ms)
 	
-	except Exception as e:
-		test_result.error = "Instantiation performance test error: " + str(e)
-		if verbose_output:
-			print("  ❌ Instantiation performance test failed: " + str(e))
 	
 	return test_result
 
@@ -1041,7 +975,7 @@ func _test_memory_usage() -> Dictionary:
 		"details": {}
 	}
 	
-	try:
+	#
 		var initial_memory = OS.get_static_memory_usage(true)
 		
 		# Instantiate scene and measure memory
@@ -1075,10 +1009,6 @@ func _test_memory_usage() -> Dictionary:
 			if verbose_output:
 				print("  ❌ Scene resource not available")
 	
-	except Exception as e:
-		test_result.error = "Memory usage test error: " + str(e)
-		if verbose_output:
-			print("  ❌ Memory usage test failed: " + str(e))
 	
 	return test_result
 

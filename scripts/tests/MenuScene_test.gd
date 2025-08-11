@@ -84,7 +84,7 @@ static func test_medical_colors_integration() -> Dictionary:
 		"error": ""
 	}
 	
-	try:
+	#
 		# Verify MedicalColors class exists and has required colors
 		var medical_green = MedicalColors.MEDICAL_GREEN
 		var sterile_blue = MedicalColors.STERILE_BLUE
@@ -100,8 +100,6 @@ static func test_medical_colors_integration() -> Dictionary:
 		else:
 			test_result.error = "Medical color values outside expected ranges"
 			
-	except:
-		test_result.error = "MedicalColors class or required colors not found"
 	
 	return test_result
 
@@ -114,7 +112,7 @@ static func test_medical_font_configuration() -> Dictionary:
 		"error": ""
 	}
 	
-	try:
+	#
 		# Test font configuration methods
 		var chart_config = MedicalFont.get_chart_font_config()
 		var button_config = MedicalFont.get_button_font_config()
@@ -128,8 +126,6 @@ static func test_medical_font_configuration() -> Dictionary:
 		else:
 			test_result.error = "Font configurations missing required properties"
 			
-	except:
-		test_result.error = "MedicalFont class or configuration methods not found"
 	
 	return test_result
 
@@ -142,7 +138,7 @@ static func test_medical_button_styling() -> Dictionary:
 		"error": ""
 	}
 	
-	try:
+	#
 		# Test button style colors
 		var primary_color = MedicalColors.URGENT_RED
 		var secondary_color = MedicalColors.EQUIPMENT_GRAY
@@ -157,8 +153,6 @@ static func test_medical_button_styling() -> Dictionary:
 		else:
 			test_result.error = "Button style colors are not sufficiently distinct"
 			
-	except:
-		test_result.error = "Button styling colors not accessible"
 	
 	return test_result
 
@@ -171,7 +165,7 @@ static func test_atmosphere_integration() -> Dictionary:
 		"error": ""
 	}
 	
-	try:
+	#
 		# Test atmosphere controller class exists
 		var atmosphere_type = AtmosphereController.AtmosphereType.SHIFT_START
 		
@@ -181,8 +175,6 @@ static func test_atmosphere_integration() -> Dictionary:
 		else:
 			test_result.error = "AtmosphereController enum values not as expected"
 			
-	except:
-		test_result.error = "AtmosphereController class or types not found"
 	
 	return test_result
 
@@ -195,7 +187,7 @@ static func test_mobile_responsive_ui() -> Dictionary:
 		"error": ""
 	}
 	
-	try:
+	#
 		# Test mobile UI layout modes exist
 		var layout_mode = MobileResponsiveUI.LayoutMode.MOBILE
 		
@@ -207,8 +199,6 @@ static func test_mobile_responsive_ui() -> Dictionary:
 		else:
 			test_result.error = "MobileResponsiveUI enum values not as expected"
 			
-	except:
-		test_result.error = "MobileResponsiveUI class or enums not found"
 	
 	return test_result
 
@@ -221,7 +211,7 @@ static func test_feedback_functionality() -> Dictionary:
 		"error": ""
 	}
 	
-	try:
+	#
 		# Test email constants
 		var feedback_email = "devaun0506@gmail.com"
 		var feedback_subject = "Blackstar Medical Simulation Feedback"
@@ -233,8 +223,6 @@ static func test_feedback_functionality() -> Dictionary:
 		else:
 			test_result.error = "Email configuration invalid"
 			
-	except:
-		test_result.error = "Email feedback configuration not accessible"
 	
 	return test_result
 

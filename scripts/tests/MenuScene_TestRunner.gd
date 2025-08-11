@@ -209,50 +209,45 @@ func test_medical_font_styling_preservation() -> Dictionary:
 	print("\n🔤 TESTING MEDICAL FONT STYLING PRESERVATION")
 	print("=============================================")
 	
-	try:
-		# Test that MedicalFont methods are accessible
-		if not ClassDB.class_exists("MedicalFont"):
-			# Try loading the script directly
-			if ResourceLoader.exists("res://scripts/ui/medical_theme/MedicalFont.gd"):
-				var font_script = load("res://scripts/ui/medical_theme/MedicalFont.gd")
-				if font_script:
-					var font_instance = font_script.new()
-					
-					# Test key methods used in MenuScene
-					if font_instance.has_method("get_chart_header_font_config"):
-						var config = font_instance.get_chart_header_font_config()
-						if config is Dictionary and config.has("size") and config.has("font_color"):
-							test_result.passed = true
-							test_result.details.font_config_valid = true
-							print("✅ Medical font styling methods preserved")
-						else:
-							test_result.error = "Medical font configuration structure invalid"
-							print("❌ Medical font configuration invalid")
+	# Test that MedicalFont methods are accessible
+	if not ClassDB.class_exists("MedicalFont"):
+		# Try loading the script directly
+		if ResourceLoader.exists("res://scripts/ui/medical_theme/MedicalFont.gd"):
+			var font_script = load("res://scripts/ui/medical_theme/MedicalFont.gd")
+			if font_script:
+				var font_instance = font_script.new()
+				
+				# Test key methods used in MenuScene
+				if font_instance.has_method("get_chart_header_font_config"):
+					var config = font_instance.get_chart_header_font_config()
+					if config is Dictionary and config.has("size") and config.has("font_color"):
+						test_result.passed = true
+						test_result.details.font_config_valid = true
+						print("✅ Medical font styling methods preserved")
 					else:
-						test_result.error = "Medical font methods not accessible"
-						print("❌ Medical font methods missing")
-					
-					font_instance.queue_free()
+						test_result.error = "Medical font configuration structure invalid"
+						print("❌ Medical font configuration invalid")
 				else:
-					test_result.error = "MedicalFont script failed to load"
-					print("❌ MedicalFont script loading failed")
+					test_result.error = "Medical font methods not accessible"
+					print("❌ Medical font methods missing")
+				
+				font_instance.queue_free()
 			else:
-				test_result.error = "MedicalFont script file not found"
-				print("❌ MedicalFont script file missing")
+				test_result.error = "MedicalFont script failed to load"
+				print("❌ MedicalFont script loading failed")
 		else:
-			# Class exists globally
-			var config = MedicalFont.get_chart_header_font_config()
-			if config is Dictionary and config.has("size"):
-				test_result.passed = true
-				test_result.details.font_config_valid = true
-				print("✅ Medical font styling preserved")
-			else:
-				test_result.error = "Medical font configuration invalid"
-				print("❌ Medical font configuration invalid")
-	
-	except Exception as e:
-		test_result.error = "Medical font styling test error: " + str(e)
-		print("❌ Medical font styling test failed: " + str(e))
+			test_result.error = "MedicalFont script file not found"
+			print("❌ MedicalFont script file missing")
+	else:
+		# Class exists globally
+		var config = MedicalFont.get_chart_header_font_config()
+		if config is Dictionary and config.has("size"):
+			test_result.passed = true
+			test_result.details.font_config_valid = true
+			print("✅ Medical font styling preserved")
+		else:
+			test_result.error = "Medical font configuration invalid"
+			print("❌ Medical font configuration invalid")
 	
 	return test_result
 
@@ -269,7 +264,7 @@ func test_start_screen_loading() -> Dictionary:
 	print("\n🖥️ TESTING START SCREEN LOADING")
 	print("================================")
 	
-	try:
+	#
 		# Load MenuScene
 		var scene_resource = load("res://scenes/MenuScene.tscn")
 		if scene_resource:
@@ -309,9 +304,6 @@ func test_start_screen_loading() -> Dictionary:
 			test_result.error = "MenuScene.tscn failed to load"
 			print("❌ MenuScene.tscn loading failed")
 	
-	except Exception as e:
-		test_result.error = "Start screen loading test error: " + str(e)
-		print("❌ Start screen loading test failed: " + str(e))
 	
 	return test_result
 
@@ -328,7 +320,7 @@ func test_button_functionality() -> Dictionary:
 	print("\n🔘 TESTING BUTTON FUNCTIONALITY")
 	print("================================")
 	
-	try:
+	#
 		# Load and instantiate MenuScene
 		var scene_resource = load("res://scenes/MenuScene.tscn")
 		if scene_resource:
@@ -378,9 +370,6 @@ func test_button_functionality() -> Dictionary:
 			test_result.error = "MenuScene.tscn loading failed"
 			print("❌ MenuScene.tscn loading failed")
 	
-	except Exception as e:
-		test_result.error = "Button functionality test error: " + str(e)
-		print("❌ Button functionality test failed: " + str(e))
 	
 	return test_result
 
@@ -397,7 +386,7 @@ func test_medical_theming_preservation() -> Dictionary:
 	print("\n🏥 TESTING MEDICAL THEMING PRESERVATION")
 	print("=======================================")
 	
-	try:
+	#
 		# Test medical color palette access
 		var colors_accessible = true
 		var colors_tested = 0
@@ -437,9 +426,6 @@ func test_medical_theming_preservation() -> Dictionary:
 			test_result.error = "Medical color theming incomplete (%d/%d colors)" % [colors_tested, required_colors.size()]
 			print("❌ Medical color theming incomplete")
 	
-	except Exception as e:
-		test_result.error = "Medical theming test error: " + str(e)
-		print("❌ Medical theming test failed: " + str(e))
 	
 	return test_result
 

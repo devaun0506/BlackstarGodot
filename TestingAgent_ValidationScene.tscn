@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://testing_agent_validation"]
+
+[ext_resource type="Script" path="res://TestingAgent_Validation.gd" id="1_validation_script"]
+
+[node name="TestingAgentValidation" type="Node"]
+script = ExtResource("1_validation_script")
