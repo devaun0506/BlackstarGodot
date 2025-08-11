@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=3 uid="uid://bb3q2wbhg5dqr"]
+
+[ext_resource type="Script" uid="uid://bwdmbtnvty018" path="res://scripts/ui/Main.gd" id="1_5rkqu"]
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5rkqu")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="CurrentScene" type="Control" parent="CanvasLayer"]
+unique_name_in_owner = true
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2

@@ -1,0 +1,137 @@
+[
+  {
+    "id": "psych_001",
+    "specialty": "Psychiatry",
+    "topic": "Major Depressive Disorder",
+    "difficulty": 2,
+    "vignette": {
+      "demographics": "A 35-year-old woman",
+      "presentation": "comes to the clinic because she has been feeling sad and hopeless for the past 6 weeks. She reports difficulty sleeping, often waking up at 3 AM and unable to return to sleep. She has lost interest in activities she previously enjoyed, including spending time with friends and her hobby of painting.",
+      "history": "The patient works as a teacher but has been calling in sick frequently due to fatigue and difficulty concentrating. She has lost 12 pounds without trying and reports decreased appetite. She denies any substance use or significant medical history. She has never had similar episodes before.",
+      "physicalExam": "Physical examination shows a well-appearing woman who appears sad and speaks slowly. She maintains eye contact but appears tearful during the interview. Her speech is soft and she has psychomotor retardation. No other abnormalities are noted on examination.",
+      "vitals": {
+        "BP": "118/75 mm Hg",
+        "HR": "72/min",
+        "RR": "16/min",
+        "Temp": "36.7°C (98.1°F)",
+        "O2Sat": "99% on room air"
+      },
+      "labs": {
+        "formatted": "TSH: 2.1 mIU/L (normal 0.4-4.0)\nB12: 485 pg/mL (normal >300)\nComplete metabolic panel: Normal\nUrine drug screen: Negative"
+      }
+    },
+    "question": "Which of the following is the most appropriate initial treatment?",
+    "choices": [
+      {"id": "A", "text": "Sertraline", "correct": true},
+      {"id": "B", "text": "Bupropion", "correct": false},
+      {"id": "C", "text": "Lorazepam", "correct": false},
+      {"id": "D", "text": "Lithium", "correct": false},
+      {"id": "E", "text": "Cognitive behavioral therapy alone", "correct": false}
+    ],
+    "explanation": {
+      "correct": "This patient meets criteria for major depressive disorder (depressed mood, anhedonia, sleep disturbance, weight loss, fatigue, concentration problems >2 weeks). SSRIs like sertraline are first-line pharmacological treatment due to efficacy and tolerability.",
+      "concepts": "Major depression diagnosis requires ≥5 symptoms for ≥2 weeks including depressed mood or anhedonia. SSRIs are first-line due to favorable side effect profile. Treatment response typically takes 4-6 weeks.",
+      "distractors": {
+        "B": "Bupropion is effective for depression but SSRIs are typically first-line; bupropion may be considered if sexual side effects are a concern",
+        "C": "Benzodiazepines treat anxiety symptoms but don't address underlying depression and have addiction potential",
+        "D": "Lithium is used for bipolar disorder; this patient has no history of mania or hypomania",
+        "E": "While CBT is effective, moderate-to-severe depression typically benefits from combined pharmacotherapy and psychotherapy"
+      }
+    },
+    "metadata": {
+      "high_yield": true,
+      "tested_frequency": "very_high",
+      "story_connection": null
+    }
+  },
+  {
+    "id": "psych_002",
+    "specialty": "Psychiatry",
+    "topic": "Bipolar Disorder",
+    "difficulty": 3,
+    "vignette": {
+      "demographics": "A 28-year-old man",
+      "presentation": "is brought to the emergency department by his family because of bizarre behavior for the past 5 days. His family reports that he has been sleeping only 2-3 hours per night but appears energetic during the day. He has been talking rapidly and jumping between topics. He recently spent $15,000 on a sports car, claiming he was going to start a business.",
+      "history": "The patient had a similar episode 2 years ago that resulted in hospitalization. Between episodes, he functions well at his job as an engineer. He was prescribed lithium after his previous episode but stopped taking it 6 months ago because he felt fine. He has no history of substance abuse.",
+      "physicalExam": "Physical examination shows an agitated man who is difficult to interrupt during conversation. He appears euphoric and overly confident. His speech is pressured and he demonstrates flight of ideas. He is hypervigilant and easily distracted. No other abnormalities are noted.",
+      "vitals": {
+        "BP": "145/90 mm Hg",
+        "HR": "105/min",
+        "RR": "18/min",
+        "Temp": "37.1°C (98.8°F)",
+        "O2Sat": "98% on room air"
+      },
+      "labs": {
+        "formatted": "Urine drug screen: Negative\nBasic metabolic panel: Normal\nThyroid function tests: Normal\nLithium level: Undetectable"
+      }
+    },
+    "question": "Which of the following is the most appropriate acute treatment?",
+    "choices": [
+      {"id": "A", "text": "Haloperidol", "correct": true},
+      {"id": "B", "text": "Fluoxetine", "correct": false},
+      {"id": "C", "text": "Clonazepam", "correct": false},
+      {"id": "D", "text": "Restart lithium", "correct": false},
+      {"id": "E", "text": "Electroconvulsive therapy", "correct": false}
+    ],
+    "explanation": {
+      "correct": "This patient is experiencing acute mania (elevated mood, decreased sleep need, pressured speech, flight of ideas, poor judgment, grandiosity). Antipsychotics like haloperidol are first-line for acute manic episodes to rapidly control symptoms.",
+      "concepts": "Acute mania treatment prioritizes rapid symptom control with antipsychotics (typical or atypical). Mood stabilizers like lithium are important for long-term management but take weeks to achieve therapeutic levels.",
+      "distractors": {
+        "B": "Antidepressants can worsen mania or trigger rapid cycling in bipolar disorder and should be avoided during manic episodes",
+        "C": "Benzodiazepines may provide some sedation but are not sufficient as monotherapy for acute mania",
+        "D": "Lithium restart is important for long-term management but takes 1-2 weeks to reach therapeutic levels; doesn't address acute symptoms",
+        "E": "ECT is effective for mania but typically reserved for severe cases or when medications are contraindicated"
+      }
+    },
+    "metadata": {
+      "high_yield": true,
+      "tested_frequency": "high",
+      "story_connection": null
+    }
+  },
+  {
+    "id": "psych_003",
+    "specialty": "Psychiatry",
+    "topic": "Panic Disorder",
+    "difficulty": 3,
+    "vignette": {
+      "demographics": "A 26-year-old woman",
+      "presentation": "comes to the clinic because of recurrent episodes of intense fear and physical symptoms for the past 3 months. During these episodes, she experiences rapid heartbeat, sweating, trembling, shortness of breath, and a feeling that she is going to die. The episodes last about 10 minutes and occur 2-3 times per week without any obvious trigger.",
+      "history": "The patient is otherwise healthy and works as a marketing coordinator. She has started avoiding crowded places and public transportation because she fears having an episode in public. She went to the emergency department twice in the past month thinking she was having a heart attack, but all tests were normal.",
+      "physicalExam": "Physical examination shows an anxious-appearing woman. She appears hypervigilant and startles easily. Cardiovascular examination reveals regular rate and rhythm. Lungs are clear. Neurological examination is normal. During the interview, she appears restless and fidgety.",
+      "vitals": {
+        "BP": "125/82 mm Hg",
+        "HR": "88/min",
+        "RR": "16/min",
+        "Temp": "36.8°C (98.2°F)",
+        "O2Sat": "99% on room air"
+      },
+      "labs": {
+        "formatted": "ECG: Normal sinus rhythm\nTSH: 1.8 mIU/L (normal)\nEchocardiogram (from recent ED visit): Normal\nBasic metabolic panel: Normal"
+      }
+    },
+    "question": "Which of the following is the most appropriate long-term treatment?",
+    "choices": [
+      {"id": "A", "text": "Escitalopram", "correct": true},
+      {"id": "B", "text": "Alprazolam as needed", "correct": false},
+      {"id": "C", "text": "Propranolol", "correct": false},
+      {"id": "D", "text": "Buspirone", "correct": false},
+      {"id": "E", "text": "Clonidine", "correct": false}
+    ],
+    "explanation": {
+      "correct": "This patient has panic disorder (recurrent panic attacks with anticipatory anxiety and avoidance behavior). SSRIs like escitalopram are first-line treatment for long-term management, providing both antipanic and antidepressant effects.",
+      "concepts": "Panic disorder treatment includes SSRIs for long-term management and CBT. Benzodiazepines provide rapid relief but risk dependence. SSRIs take 4-6 weeks to work but are preferred for maintenance therapy.",
+      "distractors": {
+        "B": "While alprazolam can abort panic attacks, long-term benzodiazepine use risks tolerance and dependence; not appropriate for maintenance therapy",
+        "C": "Beta-blockers like propranolol can help with physical symptoms but don't address the underlying panic disorder",
+        "D": "Buspirone is effective for generalized anxiety but less effective for panic disorder compared to SSRIs",
+        "E": "Clonidine is not a first-line treatment for panic disorder and is primarily used for hypertension or ADHD"
+      }
+    },
+    "metadata": {
+      "high_yield": true,
+      "tested_frequency": "high",
+      "story_connection": null
+    }
+  }
+]

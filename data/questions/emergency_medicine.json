@@ -1,0 +1,137 @@
+[
+  {
+    "id": "em_001",
+    "specialty": "Emergency Medicine",
+    "topic": "Anaphylaxis",
+    "difficulty": 3,
+    "vignette": {
+      "demographics": "A 34-year-old woman",
+      "presentation": "is brought to the emergency department by paramedics because of difficulty breathing and widespread rash that developed 15 minutes after eating at a seafood restaurant. She reports throat tightness and feels like she is going to pass out. The paramedics note that she was initially alert but became increasingly anxious and stated she felt like she was dying.",
+      "history": "The patient has a known allergy to shellfish but accidentally ate shrimp in a dish she thought was chicken. She used her epinephrine auto-injector once before the ambulance arrived. She has no other medical conditions and takes no regular medications.",
+      "physicalExam": "Physical examination shows an anxious woman in respiratory distress. She has widespread urticaria and facial swelling, particularly around the eyes and lips. Lung examination reveals bilateral expiratory wheeze. Her voice is hoarse. Cardiovascular examination shows tachycardia but no murmurs.",
+      "vitals": {
+        "BP": "85/45 mm Hg",
+        "HR": "125/min",
+        "RR": "28/min",
+        "Temp": "37.0°C (98.6°F)",
+        "O2Sat": "89% on room air"
+      },
+      "labs": {
+        "formatted": "Peak flow: Unable to perform due to distress\nArterial blood gas: pH 7.32, PCO2 35 mmHg, PO2 65 mmHg"
+      }
+    },
+    "question": "Which of the following is the most appropriate immediate treatment?",
+    "choices": [
+      {"id": "A", "text": "Intramuscular epinephrine", "correct": true},
+      {"id": "B", "text": "Intravenous methylprednisolone", "correct": false},
+      {"id": "C", "text": "Nebulized albuterol", "correct": false},
+      {"id": "D", "text": "Intravenous diphenhydramine", "correct": false},
+      {"id": "E", "text": "Endotracheal intubation", "correct": false}
+    ],
+    "explanation": {
+      "correct": "This patient has anaphylaxis with hypotension, respiratory distress, and urticaria. Despite prior epinephrine use, she remains hypotensive and hypoxemic. Immediate repeat IM epinephrine is the most critical intervention to reverse cardiovascular collapse.",
+      "concepts": "Anaphylaxis is a life-threatening systemic reaction requiring immediate epinephrine. Repeat doses may be needed every 5-15 minutes. Epinephrine is the only medication that can reverse the pathophysiology of anaphylaxis.",
+      "distractors": {
+        "B": "Corticosteroids are important for preventing biphasic reactions but don't reverse acute anaphylaxis; epinephrine is the priority",
+        "C": "Albuterol may help bronchospasm but doesn't address the systemic vasodilation and capillary leak causing hypotension",
+        "D": "Antihistamines help with urticaria but don't reverse the life-threatening cardiovascular collapse",
+        "E": "While airway management may be needed, stabilizing cardiovascular status with epinephrine takes priority unless complete airway obstruction"
+      }
+    },
+    "metadata": {
+      "high_yield": true,
+      "tested_frequency": "very_high",
+      "story_connection": null
+    }
+  },
+  {
+    "id": "em_002",
+    "specialty": "Emergency Medicine",
+    "topic": "Stroke",
+    "difficulty": 4,
+    "vignette": {
+      "demographics": "A 68-year-old man",
+      "presentation": "is brought to the emergency department by his wife because of sudden onset of left-sided weakness and slurred speech that began 90 minutes ago. His wife found him sitting in his chair, unable to move his left arm and leg, and struggling to speak clearly. He was normal when she left for the grocery store 2 hours ago.",
+      "history": "The patient has a history of hypertension and atrial fibrillation. He takes lisinopril but admits he stopped taking his warfarin 2 months ago because of the need for frequent blood draws. He is a former smoker with a 40 pack-year history. He quit smoking 10 years ago.",
+      "physicalExam": "Physical examination shows an alert man with left facial droop and dysarthria. Neurological examination reveals left hemiplegia with arm weaker than leg (4/5 leg, 2/5 arm). Left visual field defect is present. He has left-sided neglect and difficulty with leftward gaze. NIH Stroke Scale score is 16.",
+      "vitals": {
+        "BP": "178/95 mm Hg",
+        "HR": "88/min irregularly irregular",
+        "RR": "16/min",
+        "Temp": "36.8°C (98.2°F)",
+        "O2Sat": "96% on room air"
+      },
+      "labs": {
+        "formatted": "Glucose: 145 mg/dL\nINR: 1.1\nPlatelet count: 285,000/μL\nCT head: No acute hemorrhage or early ischemic changes\nLast known normal: 90 minutes ago"
+      }
+    },
+    "question": "Which of the following is the most appropriate treatment?",
+    "choices": [
+      {"id": "A", "text": "Intravenous alteplase", "correct": true},
+      {"id": "B", "text": "Mechanical thrombectomy alone", "correct": false},
+      {"id": "C", "text": "Aspirin 325 mg", "correct": false},
+      {"id": "D", "text": "Antihypertensive therapy", "correct": false},
+      {"id": "E", "text": "Heparin anticoagulation", "correct": false}
+    ],
+    "explanation": {
+      "correct": "This patient has acute ischemic stroke within the therapeutic window (90 minutes from last known normal, <4.5 hours). He meets criteria for IV alteplase: no contraindications, NIH Stroke Scale >4, and CT shows no hemorrhage.",
+      "concepts": "Acute stroke treatment prioritizes rapid reperfusion. IV alteplase is indicated within 4.5 hours for eligible patients. Time is brain - every minute counts. Mechanical thrombectomy may be added for large vessel occlusions.",
+      "distractors": {
+        "B": "Thrombectomy is indicated for large vessel occlusions but IV alteplase should be given first when eligible, especially in centers without immediate thrombectomy capability",
+        "C": "Aspirin is delayed 24 hours after alteplase to reduce bleeding risk; thrombolysis takes priority in acute setting",
+        "D": "Blood pressure is not lowered acutely unless >185/110 for alteplase eligibility or >220/120 otherwise; may worsen stroke",
+        "E": "Heparin is not routinely used in acute stroke and increases bleeding risk when combined with alteplase"
+      }
+    },
+    "metadata": {
+      "high_yield": true,
+      "tested_frequency": "very_high",
+      "story_connection": null
+    }
+  },
+  {
+    "id": "em_003",
+    "specialty": "Emergency Medicine",
+    "topic": "Sepsis",
+    "difficulty": 4,
+    "vignette": {
+      "demographics": "A 72-year-old woman",
+      "presentation": "is brought to the emergency department by her family because of confusion and fever for the past day. Her family reports that she has been increasingly lethargic and confused, and they found her with a fever and shaking chills this morning. She lives in a nursing home and was treated for a urinary tract infection 2 weeks ago.",
+      "history": "The patient has dementia, diabetes mellitus, and chronic kidney disease. She has been more confused than usual over the past few days. The nursing home staff noted decreased oral intake and sent her to the hospital when she became febrile and hypotensive.",
+      "physicalExam": "Physical examination shows an elderly woman who appears ill and is minimally responsive to verbal stimuli. She is warm to touch and has dry mucous membranes. Lung examination reveals crackles in the right base. Abdominal examination shows suprapubic tenderness. No obvious skin infections are noted.",
+      "vitals": {
+        "BP": "88/52 mm Hg",
+        "HR": "118/min",
+        "RR": "24/min",
+        "Temp": "38.9°C (102°F)",
+        "O2Sat": "94% on room air"
+      },
+      "labs": {
+        "formatted": "WBC: 18,500/μL with 88% neutrophils\nLactate: 3.2 mmol/L (normal <2)\nCreatinine: 2.8 mg/dL (baseline 1.6)\nUrinalysis: >100 WBC/hpf, positive nitrites\nqSOFA score: 3 (hypotension, altered mental status, tachypnea)"
+      }
+    },
+    "question": "Which of the following bundles should be completed within the first hour?",
+    "choices": [
+      {"id": "A", "text": "Blood cultures, antibiotics, and IV fluids", "correct": true},
+      {"id": "B", "text": "Central line placement and vasopressors", "correct": false},
+      {"id": "C", "text": "Urinalysis and chest X-ray only", "correct": false},
+      {"id": "D", "text": "Corticosteroids and repeat lactate", "correct": false},
+      {"id": "E", "text": "Echocardiogram and troponins", "correct": false}
+    ],
+    "explanation": {
+      "correct": "This patient has sepsis (qSOFA ≥2) and septic shock (hypotension despite fluids). The Surviving Sepsis Campaign Hour-1 bundle includes: blood cultures before antibiotics, broad-spectrum antibiotics, and 30 mL/kg IV crystalloids for hypotension/lactate ≥4.",
+      "concepts": "Sepsis management follows Hour-1 bundle: measure lactate, obtain blood cultures, give antibiotics, give IV fluids for hypotension/elevated lactate. Early recognition and treatment within 1 hour improves outcomes significantly.",
+      "distractors": {
+        "B": "Central line and vasopressors are important but come after initial resuscitation with IV fluids; not part of the Hour-1 bundle",
+        "C": "While diagnostics are important, the Hour-1 bundle focuses on immediate life-saving interventions (cultures, antibiotics, fluids)",
+        "D": "Corticosteroids may be considered in refractory shock but are not part of the initial Hour-1 bundle",
+        "E": "Cardiac evaluation may be indicated but doesn't address the immediate need for source control and antimicrobial therapy"
+      }
+    },
+    "metadata": {
+      "high_yield": true,
+      "tested_frequency": "very_high",
+      "story_connection": null
+    }
+  }
+]

@@ -1,0 +1,45 @@
+{
+  "id": "test_001",
+  "specialty": "Internal Medicine",
+  "topic": "System Validation",
+  "difficulty": 1,
+  "vignette": {
+    "demographics": "A 30-year-old patient",
+    "presentation": "presents for system validation testing to ensure the Blackstar game flow functions correctly. This is a standardized test case designed to verify proper loading and display of patient data across all game systems.",
+    "history": "The patient has no significant medical history and is being used as a test case to validate game mechanics. All clinical parameters have been set to normal baseline values to ensure system functionality.",
+    "physicalExam": "Physical examination shows a test patient in no acute distress. All systems appear to be functioning within normal parameters. No abnormalities detected on systematic evaluation.",
+    "vitals": {
+      "BP": "120/80 mm Hg",
+      "HR": "70/min",
+      "RR": "16/min",
+      "Temp": "36.5°C (97.7°F)",
+      "O2Sat": "98% on room air"
+    },
+    "labs": {
+      "formatted": "All laboratory values within normal limits\nSystem validation: PASSED\nData integrity: CONFIRMED"
+    }
+  },
+  "question": "What is the most appropriate action for this test case?",
+  "choices": [
+    {"id": "A", "text": "Run the test", "correct": false},
+    {"id": "B", "text": "Skip the test", "correct": false},
+    {"id": "C", "text": "Debug the test", "correct": false},
+    {"id": "D", "text": "Fail the test", "correct": false},
+    {"id": "E", "text": "Pass the test", "correct": true}
+  ],
+  "explanation": {
+    "correct": "This is a validation test case designed to verify that all game systems are working correctly. When all systems function properly, the appropriate action is to pass the test.",
+    "concepts": "System validation requires successful loading and display of patient data in the standardized NBME format. All game mechanics should function correctly with properly formatted data.",
+    "distractors": {
+      "A": "Running the test is part of the process, but the question asks for the most appropriate action when systems are functioning correctly",
+      "B": "Skipping the test would prevent validation of proper system functionality",
+      "C": "Debugging is only necessary when systems are not functioning correctly",
+      "D": "Failing the test would be inappropriate when all systems are working as designed"
+    }
+  },
+  "metadata": {
+    "high_yield": false,
+    "tested_frequency": "low",
+    "story_connection": null
+  }
+}

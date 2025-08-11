@@ -1,0 +1,137 @@
+[
+  {
+    "id": "obgyn_001",
+    "specialty": "OB/GYN",
+    "topic": "Preeclampsia",
+    "difficulty": 3,
+    "vignette": {
+      "demographics": "A 28-year-old woman",
+      "presentation": "at 36 weeks gestation presents to the obstetric unit because of headache and vision changes for the past 6 hours. She reports a severe, pounding headache and seeing spots or flashing lights. She also notes swelling in her hands and face over the past 2 days. This is her first pregnancy.",
+      "history": "Her pregnancy has been complicated by gestational hypertension first noted at 32 weeks gestation. Her blood pressures have been ranging from 140-150/85-95 mm Hg. Fetal growth has been appropriate, and she has felt normal fetal movement. She has no significant medical history and takes only prenatal vitamins.",
+      "physicalExam": "Physical examination shows an anxious-appearing woman. She has notable facial edema and pitting edema in both hands. Deep tendon reflexes are brisk (3+) with sustained clonus. Fundal height is appropriate for gestational age. Fetal heart rate monitoring shows a baseline of 140 bpm with normal variability.",
+      "vitals": {
+        "BP": "164/108 mm Hg",
+        "HR": "88/min",
+        "RR": "18/min",
+        "Temp": "36.8°C (98.2°F)",
+        "O2Sat": "98% on room air"
+      },
+      "labs": {
+        "formatted": "Urine protein: 4+ on dipstick\n24-hour urine protein: 6.2 g (normal <0.3 g)\nPlatelet count: 95,000/μL\nAST: 85 U/L (normal <40)\nCreatinine: 1.4 mg/dL (baseline 0.7)"
+      }
+    },
+    "question": "Which of the following is the most appropriate management?",
+    "choices": [
+      {"id": "A", "text": "Immediate delivery", "correct": true},
+      {"id": "B", "text": "Antihypertensive therapy and bed rest", "correct": false},
+      {"id": "C", "text": "Magnesium sulfate and observe", "correct": false},
+      {"id": "D", "text": "Corticosteroids for fetal lung maturity", "correct": false},
+      {"id": "E", "text": "Furosemide for fluid overload", "correct": false}
+    ],
+    "explanation": {
+      "correct": "This patient has severe preeclampsia with features (severe hypertension >160/110, proteinuria >5g/24h, thrombocytopenia, elevated liver enzymes, elevated creatinine, neurologic symptoms). At 36+ weeks, immediate delivery is indicated.",
+      "concepts": "Severe preeclampsia with severe features requires delivery regardless of gestational age. Features include: severe HTN, proteinuria >5g/24h, oliguria, cerebral/visual symptoms, pulmonary edema, thrombocytopenia <100k, elevated liver enzymes.",
+      "distractors": {
+        "B": "Antihypertensive therapy alone is insufficient for severe preeclampsia with severe features; delivery is the definitive treatment",
+        "C": "Magnesium sulfate should be given for seizure prophylaxis but delivery is still required; observation is inappropriate at this severity",
+        "D": "Steroids are given <34 weeks for fetal lung maturity; at 36+ weeks, the benefits of delivery outweigh steroid administration",
+        "E": "Diuretics are contraindicated in preeclampsia as they can worsen the condition by reducing intravascular volume"
+      }
+    },
+    "metadata": {
+      "high_yield": true,
+      "tested_frequency": "very_high",
+      "story_connection": null
+    }
+  },
+  {
+    "id": "obgyn_002",
+    "specialty": "OB/GYN",
+    "topic": "Ectopic Pregnancy",
+    "difficulty": 3,
+    "vignette": {
+      "demographics": "A 26-year-old woman",
+      "presentation": "comes to the emergency department because of pelvic pain and vaginal spotting for the past 2 days. She describes the pain as crampy and located on the right side. The spotting is light and brownish. She reports her last menstrual period was 7 weeks ago, and a home pregnancy test 1 week ago was positive.",
+      "history": "The patient has a history of pelvic inflammatory disease treated 3 years ago. She uses no contraception and has been sexually active with one partner. She denies fever, nausea, or urinary symptoms. She has never been pregnant before.",
+      "physicalExam": "Physical examination shows a woman in mild distress. Abdominal examination reveals mild tenderness in the right lower quadrant without guarding or rigidity. Pelvic examination shows a closed cervix with minimal bleeding. The right adnexa is tender, and a small mass is palpable. The left adnexa is normal.",
+      "vitals": {
+        "BP": "118/72 mm Hg",
+        "HR": "82/min",
+        "RR": "16/min",
+        "Temp": "36.9°C (98.4°F)",
+        "O2Sat": "99% on room air"
+      },
+      "labs": {
+        "formatted": "β-hCG: 2,400 mIU/mL\nHemoglobin: 11.8 g/dL\nTransvaginal ultrasound: No intrauterine gestational sac\nComplex right adnexal mass measuring 3.2 cm\nSmall amount of free fluid in pelvis"
+      }
+    },
+    "question": "Which of the following is the most appropriate treatment?",
+    "choices": [
+      {"id": "A", "text": "Methotrexate injection", "correct": true},
+      {"id": "B", "text": "Laparoscopic salpingectomy", "correct": false},
+      {"id": "C", "text": "Expectant management", "correct": false},
+      {"id": "D", "text": "Dilation and curettage", "correct": false},
+      {"id": "E", "text": "Repeat β-hCG in 48 hours", "correct": false}
+    ],
+    "explanation": {
+      "correct": "This is an unruptured tubal ectopic pregnancy. The patient is hemodynamically stable with β-hCG <5,000 mIU/mL and mass <3.5 cm, making her a good candidate for methotrexate therapy (medical management).",
+      "concepts": "Ectopic pregnancy management depends on hemodynamic stability, β-hCG level, and mass size. Methotrexate criteria: stable patient, β-hCG <5,000, mass <3.5 cm, no fetal cardiac activity, no contraindications to methotrexate.",
+      "distractors": {
+        "B": "Surgery is indicated for hemodynamic instability, failed medical management, or contraindications to methotrexate; this stable patient can try medical management first",
+        "C": "Expectant management is only appropriate for very low and declining β-hCG levels; this patient has a significant ectopic mass",
+        "D": "D&C would not address the ectopic pregnancy and could cause dangerous bleeding if intrauterine pregnancy components are present",
+        "E": "While serial β-hCG monitoring is part of management, treatment should be initiated rather than just observing in a patient with confirmed ectopic"
+      }
+    },
+    "metadata": {
+      "high_yield": true,
+      "tested_frequency": "high",
+      "story_connection": null
+    }
+  },
+  {
+    "id": "obgyn_003",
+    "specialty": "OB/GYN",
+    "topic": "Postpartum Hemorrhage",
+    "difficulty": 4,
+    "vignette": {
+      "demographics": "A 32-year-old woman",
+      "presentation": "delivered a healthy baby boy 30 minutes ago via normal spontaneous vaginal delivery. The delivery was complicated by a prolonged second stage of labor lasting 4 hours. The placenta delivered spontaneously and appeared intact. However, she continues to have heavy vaginal bleeding with large clots.",
+      "history": "This was her fourth pregnancy (G4P3003). Her previous deliveries were uncomplicated. This pregnancy was notable for gestational diabetes controlled with diet. Labor was augmented with pitocin for 8 hours due to inadequate contractions. She received epidural anesthesia.",
+      "physicalExam": "Physical examination shows a pale, diaphoretic woman. The uterus is boggy and enlarged, extending above the umbilicus. Massage of the uterus results in temporary contraction and expulsion of large clots, but the bleeding continues. The perineum shows a small first-degree laceration that is not actively bleeding.",
+      "vitals": {
+        "BP": "95/58 mm Hg",
+        "HR": "118/min",
+        "RR": "22/min",
+        "Temp": "36.4°C (97.5°F)",
+        "O2Sat": "97% on room air"
+      },
+      "labs": {
+        "formatted": "Estimated blood loss: 1,200 mL and ongoing\nHemoglobin: 8.2 g/dL (pre-delivery 11.5 g/dL)\nPlatelet count: 180,000/μL\nPT/INR: Normal"
+      }
+    },
+    "question": "Which of the following is the most appropriate initial management?",
+    "choices": [
+      {"id": "A", "text": "Intravenous methylergonovine", "correct": true},
+      {"id": "B", "text": "Immediate hysterectomy", "correct": false},
+      {"id": "C", "text": "Uterine artery embolization", "correct": false},
+      {"id": "D", "text": "Fresh frozen plasma transfusion", "correct": false},
+      {"id": "E", "text": "Exploratory laparotomy", "correct": false}
+    ],
+    "explanation": {
+      "correct": "This is postpartum hemorrhage due to uterine atony (boggy, enlarged uterus). After ensuring IV access and fundal massage, methylergonovine (Methergine) is appropriate to promote uterine contraction and control bleeding.",
+      "concepts": "PPH management follows stepwise approach: 1) Fundal massage and IV access, 2) Oxytocin, 3) Methylergonovine or other uterotonics, 4) Surgical interventions if medical management fails. Uterine atony is the most common cause.",
+      "distractors": {
+        "B": "Hysterectomy is a last resort for life-threatening hemorrhage when all other measures fail; medical management should be attempted first",
+        "C": "Uterine artery embolization is used when surgical options are being considered, but medical management with uterotonics should be tried first",
+        "D": "FFP is indicated for coagulopathy, but this patient has normal coagulation studies; the bleeding is due to uterine atony",
+        "E": "Exploratory surgery is not indicated for uterine atony; the problem is medical (inadequate uterine contraction) rather than surgical"
+      }
+    },
+    "metadata": {
+      "high_yield": true,
+      "tested_frequency": "high",
+      "story_connection": null
+    }
+  }
+]

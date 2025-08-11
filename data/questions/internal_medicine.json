@@ -1,0 +1,227 @@
+[
+  {
+    "id": "im_001",
+    "specialty": "Internal Medicine",
+    "topic": "Myocardial Infarction",
+    "difficulty": 3,
+    "vignette": {
+      "demographics": "A 67-year-old man",
+      "presentation": "comes to the emergency department because of chest pain for the past 2 hours. He describes the pain as crushing and substernal, radiating to his left arm and jaw. He also reports nausea and diaphoresis. He has a 30-year history of smoking 2 packs daily and was diagnosed with hypertension 10 years ago. His medications include lisinopril and hydrochlorothiazide. He has no known drug allergies.",
+      "history": "The patient was playing golf when he suddenly developed severe chest pain. He initially thought it was indigestion but the pain persisted and worsened. His wife drove him to the hospital. He denies any recent trauma, cocaine use, or similar episodes in the past.",
+      "physicalExam": "Physical examination shows an anxious-appearing man. He is diaphoretic and appears uncomfortable. Cardiac examination reveals regular rate and rhythm without murmurs, rubs, or gallops. Lungs are clear to auscultation bilaterally. Abdomen is soft and nontender. Extremities show no edema.",
+      "vitals": {
+        "BP": "142/89 mm Hg",
+        "HR": "98/min",
+        "RR": "18/min",
+        "Temp": "37.2°C (99°F)",
+        "O2Sat": "94% on room air"
+      },
+      "labs": {
+        "formatted": "Initial troponin I: 0.8 ng/mL (normal <0.04)\nCK-MB: 45 ng/mL (normal 0-3)\nECG: ST-elevation in leads II, III, aVF with reciprocal changes in I, aVL"
+      }
+    },
+    "question": "Which of the following is the most appropriate immediate management?",
+    "choices": [
+      {"id": "A", "text": "Primary percutaneous coronary intervention", "correct": true},
+      {"id": "B", "text": "Fibrinolytic therapy with alteplase", "correct": false},
+      {"id": "C", "text": "Cardiac catheterization within 24 hours", "correct": false},
+      {"id": "D", "text": "High-dose statin and aspirin", "correct": false},
+      {"id": "E", "text": "Echocardiography", "correct": false}
+    ],
+    "explanation": {
+      "correct": "This patient has an acute STEMI (inferior wall) presenting within 2 hours of symptom onset. Primary PCI is the preferred reperfusion strategy when available within 90 minutes of first medical contact and is superior to fibrinolytic therapy.",
+      "concepts": "STEMI management prioritizes rapid reperfusion. Primary PCI is preferred over fibrinolytics when timely (door-to-balloon <90 min). The ECG shows inferior STEMI (II, III, aVF) with reciprocal changes.",
+      "distractors": {
+        "B": "Fibrinolytic therapy is second-line for STEMI when PCI is not available within 90 minutes or when transfer would cause significant delay",
+        "C": "Delayed catheterization beyond 12 hours would miss the critical window for myocardial salvage in STEMI",
+        "D": "While important for secondary prevention, these do not address the acute need for emergent reperfusion in STEMI",
+        "E": "Echocardiography may be useful later but should not delay emergency reperfusion therapy in obvious STEMI"
+      }
+    },
+    "metadata": {
+      "high_yield": true,
+      "tested_frequency": "very_high",
+      "story_connection": "shift_3_patient_7"
+    }
+  },
+  {
+    "id": "im_002",
+    "specialty": "Internal Medicine",
+    "topic": "Heart Failure",
+    "difficulty": 4,
+    "vignette": {
+      "demographics": "A 78-year-old woman",
+      "presentation": "is brought to the clinic by her daughter because of worsening shortness of breath and ankle swelling for the past 3 weeks. She reports orthopnea and now sleeps on 3 pillows. She has been waking up gasping for air 2-3 times per night. She also notes a 10-pound weight gain over the past month despite poor appetite.",
+      "history": "The patient has a history of hypertension for 20 years and had a myocardial infarction 5 years ago. Her current medications include metoprolol, lisinopril, and atorvastatin. She admits to eating Chinese takeout frequently and not always taking her medications as prescribed.",
+      "physicalExam": "Physical examination shows an elderly woman in mild respiratory distress. Jugular venous distention is present to the angle of the jaw. Cardiac examination reveals an S3 gallop and a grade 2/6 systolic murmur at the apex. Lungs show bilateral crackles in the lower third. There is 3+ pitting edema to the knees bilaterally.",
+      "vitals": {
+        "BP": "156/92 mm Hg",
+        "HR": "110/min",
+        "RR": "22/min",
+        "Temp": "36.8°C (98.2°F)",
+        "O2Sat": "88% on room air"
+      },
+      "labs": {
+        "formatted": "BNP: 1,250 pg/mL (normal <100)\nCreatinine: 1.4 mg/dL (baseline 1.1)\nNa+: 134 mEq/L\nK+: 4.2 mEq/L\nChest X-ray: Cardiomegaly, bilateral pulmonary edema"
+      }
+    },
+    "question": "Which of the following is the most appropriate initial treatment?",
+    "choices": [
+      {"id": "A", "text": "Intravenous furosemide", "correct": true},
+      {"id": "B", "text": "Increase lisinopril dose", "correct": false},
+      {"id": "C", "text": "Add spironolactone", "correct": false},
+      {"id": "D", "text": "Start digoxin", "correct": false},
+      {"id": "E", "text": "Initiate dobutamine infusion", "correct": false}
+    ],
+    "explanation": {
+      "correct": "This patient has acute decompensated heart failure with volume overload (JVD, S3, pulmonary edema, peripheral edema). IV diuretics are first-line therapy to reduce preload and improve symptoms.",
+      "concepts": "Acute HF management focuses on symptom relief through decongestion. Loop diuretics are first-line for volume overload. The elevated BNP confirms HF diagnosis. S3 gallop indicates volume overload.",
+      "distractors": {
+        "B": "ACE inhibitor optimization is important but secondary to immediate diuresis in acute decompensation with volume overload",
+        "C": "Spironolactone is beneficial for chronic HF management but not first-line for acute decompensation",
+        "D": "Digoxin may help with symptoms in chronic HF but is not first-line for acute decompensated HF with volume overload",
+        "E": "Dobutamine is reserved for cardiogenic shock or severe hypoperfusion, which this patient does not have"
+      }
+    },
+    "metadata": {
+      "high_yield": true,
+      "tested_frequency": "very_high",
+      "story_connection": null
+    }
+  },
+  {
+    "id": "im_003",
+    "specialty": "Internal Medicine",
+    "topic": "Diabetes Mellitus",
+    "difficulty": 2,
+    "vignette": {
+      "demographics": "A 52-year-old man",
+      "presentation": "comes to the clinic for a routine follow-up visit. He was diagnosed with type 2 diabetes mellitus 6 months ago and has been taking metformin 1000 mg twice daily. He reports adherence to his medication and dietary modifications. He checks his blood glucose at home and brings his logbook showing fasting glucose values ranging from 140-180 mg/dL over the past month.",
+      "history": "The patient has lost 15 pounds since his diagnosis through diet and exercise. He walks 30 minutes daily and follows a diabetic diet. He has no symptoms of polyuria, polydipsia, or polyphagia. Family history is significant for diabetes in both parents.",
+      "physicalExam": "Physical examination shows a well-appearing man. BMI is 28 kg/m². Blood pressure is normal. Cardiovascular examination is unremarkable. Fundoscopic examination shows no diabetic changes. Feet examination reveals intact sensation and no ulcers.",
+      "vitals": {
+        "BP": "128/78 mm Hg",
+        "HR": "72/min",
+        "RR": "16/min",
+        "Temp": "36.5°C (97.7°F)",
+        "O2Sat": "99% on room air"
+      },
+      "labs": {
+        "formatted": "HbA1c: 8.2% (target <7%)\nFasting glucose: 165 mg/dL\nCreatinine: 0.9 mg/dL\nAlbumin/creatinine ratio: 15 mg/g (normal <30)"
+      }
+    },
+    "question": "Which of the following is the most appropriate next step in management?",
+    "choices": [
+      {"id": "A", "text": "Add a sulfonylurea", "correct": true},
+      {"id": "B", "text": "Increase metformin to 1500 mg twice daily", "correct": false},
+      {"id": "C", "text": "Switch to insulin", "correct": false},
+      {"id": "D", "text": "Add pioglitazone", "correct": false},
+      {"id": "E", "text": "Continue current therapy and recheck in 3 months", "correct": false}
+    ],
+    "explanation": {
+      "correct": "The patient's HbA1c is 8.2%, which is above the target of <7% despite maximum metformin therapy and lifestyle modifications. Adding a second antidiabetic agent is indicated. Sulfonylureas are a reasonable second-line choice.",
+      "concepts": "Type 2 DM management follows a stepwise approach. When metformin plus lifestyle modifications fail to achieve HbA1c <7%, adding a second agent is recommended. Sulfonylureas are cost-effective second-line options.",
+      "distractors": {
+        "B": "Patient is already on near-maximum metformin dose (2000mg/day is maximum), and increasing further is unlikely to achieve target",
+        "C": "Insulin is typically reserved for later stages or when multiple oral agents fail, not as second-line therapy",
+        "D": "Pioglitazone is effective but has more side effects (weight gain, edema, fracture risk) compared to sulfonylureas as second-line",
+        "E": "The HbA1c is significantly above target; waiting 3 months without intervention would delay necessary intensification"
+      }
+    },
+    "metadata": {
+      "high_yield": true,
+      "tested_frequency": "high",
+      "story_connection": null
+    }
+  },
+  {
+    "id": "im_004",
+    "specialty": "Internal Medicine",
+    "topic": "Pneumonia",
+    "difficulty": 3,
+    "vignette": {
+      "demographics": "A 72-year-old woman",
+      "presentation": "is brought to the emergency department by her family because of fever, cough, and confusion for the past 2 days. She developed a productive cough with yellow sputum 5 days ago, followed by fever and chills. Her family reports that she has been increasingly confused and has had difficulty recognizing familiar people.",
+      "history": "The patient lives in a nursing home and has a history of chronic obstructive pulmonary disease and dementia. She was recently treated with antibiotics for a urinary tract infection 3 weeks ago. Her medications include tiotropium inhaler and memantine.",
+      "physicalExam": "Physical examination shows an elderly woman who appears ill and is disoriented to time and place. She has decreased breath sounds and crackles in the right lower lobe. No signs of meningeal irritation are present. Cardiac examination is unremarkable except for tachycardia.",
+      "vitals": {
+        "BP": "108/65 mm Hg",
+        "HR": "118/min",
+        "RR": "26/min",
+        "Temp": "38.9°C (102°F)",
+        "O2Sat": "91% on room air"
+      },
+      "labs": {
+        "formatted": "WBC: 16,200/μL with 85% neutrophils\nCreatinine: 1.6 mg/dL (baseline 1.0)\nBUN: 42 mg/dL\nChest X-ray: Right lower lobe consolidation\nUrinalysis: Normal"
+      }
+    },
+    "question": "What is the CURB-65 score for this patient?",
+    "choices": [
+      {"id": "A", "text": "2", "correct": false},
+      {"id": "B", "text": "3", "correct": true},
+      {"id": "C", "text": "4", "correct": false},
+      {"id": "D", "text": "1", "correct": false},
+      {"id": "E", "text": "5", "correct": false}
+    ],
+    "explanation": {
+      "correct": "CURB-65 score = 3. Components present: Confusion (1), BUN >19 mg/dL (1), and Age ≥65 (1). Respiratory rate is 26/min (≥30 needed for 1 point), and systolic BP is 108 (≥90, so no point for hypotension).",
+      "concepts": "CURB-65 scoring: Confusion (1), BUN >19 mg/dL (1), Respiratory rate ≥30/min (1), Blood pressure <90 systolic or ≤60 diastolic (1), Age ≥65 (1). Score helps determine pneumonia severity and treatment setting.",
+      "distractors": {
+        "A": "Score of 2 would miss either the confusion, elevated BUN, or age ≥65 component",
+        "C": "Score of 4 would incorrectly count respiratory rate (26 vs ≥30 required) or blood pressure (108/65 vs <90/60 required)",
+        "D": "Score of 1 would miss multiple clearly present criteria (confusion, BUN >19, age ≥65)",
+        "E": "Score of 5 would require all criteria to be met, but respiratory rate and blood pressure criteria are not met"
+      }
+    },
+    "metadata": {
+      "high_yield": true,
+      "tested_frequency": "high",
+      "story_connection": null
+    }
+  },
+  {
+    "id": "im_005",
+    "specialty": "Internal Medicine",
+    "topic": "Hypertensive Crisis",
+    "difficulty": 4,
+    "vignette": {
+      "demographics": "A 58-year-old man",
+      "presentation": "is brought to the emergency department by his wife because of severe headache, nausea, and visual disturbances for the past 4 hours. He describes the headache as the worst of his life and reports seeing flashing lights. His wife notes that he has been increasingly agitated and confused.",
+      "history": "The patient has a 20-year history of hypertension but admits to poor medication compliance. He stopped taking his antihypertensive medications 2 weeks ago because he felt fine. He has no history of drug use. His medications were previously lisinopril and amlodipine.",
+      "physicalExam": "Physical examination shows an agitated man who appears uncomfortable. Fundoscopic examination reveals papilledema, flame-shaped hemorrhages, and cotton wool spots. Neurological examination shows no focal deficits but the patient is disoriented. Cardiac examination reveals an S4 gallop.",
+      "vitals": {
+        "BP": "228/134 mm Hg",
+        "HR": "105/min",
+        "RR": "20/min",
+        "Temp": "37.1°C (98.8°F)",
+        "O2Sat": "98% on room air"
+      },
+      "labs": {
+        "formatted": "Creatinine: 2.1 mg/dL (baseline 1.2)\nBUN: 58 mg/dL\nUrinalysis: 3+ protein, RBC casts\nTroponin: Normal\nCT head: No acute findings"
+      }
+    },
+    "question": "Which of the following is the most appropriate initial antihypertensive agent?",
+    "choices": [
+      {"id": "A", "text": "Intravenous labetalol", "correct": true},
+      {"id": "B", "text": "Sublingual nifedipine", "correct": false},
+      {"id": "C", "text": "Intravenous hydralazine", "correct": false},
+      {"id": "D", "text": "Oral lisinopril", "correct": false},
+      {"id": "E", "text": "Intravenous esmolol", "correct": false}
+    ],
+    "explanation": {
+      "correct": "This patient has hypertensive emergency with end-organ damage (papilledema, encephalopathy, acute kidney injury). IV labetalol provides controlled BP reduction and is first-line for hypertensive emergencies.",
+      "concepts": "Hypertensive emergency requires immediate but controlled BP reduction (10-15% in first hour). IV labetalol is preferred due to predictable onset/offset and dual alpha/beta blockade. Avoid precipitous drops that can cause ischemia.",
+      "distractors": {
+        "B": "Sublingual nifedipine can cause unpredictable, precipitous BP drops leading to stroke or cardiac ischemia and is contraindicated",
+        "C": "IV hydralazine can cause unpredictable hypotension and reflex tachycardia, making it less preferred than labetalol",
+        "D": "Oral agents are too slow for hypertensive emergency requiring immediate but controlled reduction",
+        "E": "Esmolol is ultra-short acting and requires continuous infusion monitoring, making labetalol more practical for initial management"
+      }
+    },
+    "metadata": {
+      "high_yield": true,
+      "tested_frequency": "high",
+      "story_connection": null
+    }
+  }
+]

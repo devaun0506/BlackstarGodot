@@ -1,0 +1,45 @@
+{
+  "id": "sample_001",
+  "specialty": "Internal Medicine",
+  "topic": "Myocardial Infarction",
+  "difficulty": 3,
+  "vignette": {
+    "demographics": "A 52-year-old man",
+    "presentation": "comes to the emergency department because of severe chest pain for the past 45 minutes. He describes the pain as crushing and substernal, radiating to his left arm and jaw. The pain began suddenly while he was watching television and is rated 9/10 in severity. He also reports nausea and diaphoresis.",
+    "history": "The patient has a history of hypertension and hyperlipidemia, both well-controlled with medications. His father died of myocardial infarction at age 58. He denies any recent cocaine use, trauma, or similar episodes. He takes lisinopril and atorvastatin daily.",
+    "physicalExam": "Physical examination shows a pale, diaphoretic man in moderate distress. Cardiac examination reveals regular rate and rhythm without murmurs, rubs, or gallops. Lungs are clear to auscultation bilaterally. Extremities show no peripheral edema. No jugular venous distention is present.",
+    "vitals": {
+      "BP": "160/95 mm Hg",
+      "HR": "88/min",
+      "RR": "20/min",
+      "Temp": "36.9°C (98.4°F)",
+      "O2Sat": "97% on room air"
+    },
+    "labs": {
+      "formatted": "Initial troponin I: 0.12 ng/mL (normal <0.04)\nCK-MB: 8.2 ng/mL (normal 0-3)\nECG: ST-elevation in leads V2-V6\nChest X-ray: Normal heart size, clear lungs"
+    }
+  },
+  "question": "Which of the following is the most appropriate immediate management?",
+  "choices": [
+    {"id": "A", "text": "Primary percutaneous coronary intervention", "correct": true},
+    {"id": "B", "text": "Gastroesophageal reflux treatment", "correct": false},
+    {"id": "C", "text": "Anxiolytic therapy", "correct": false},
+    {"id": "D", "text": "Musculoskeletal pain management", "correct": false},
+    {"id": "E", "text": "Observation and serial ECGs", "correct": false}
+  ],
+  "explanation": {
+    "correct": "This patient presents with acute STEMI (anterior wall) based on classic symptoms, risk factors, elevated cardiac biomarkers, and ST-elevations in V2-V6. Primary PCI is the preferred reperfusion strategy when available within 90 minutes and is superior to fibrinolytic therapy.",
+    "concepts": "STEMI management prioritizes rapid reperfusion. Primary PCI is preferred over fibrinolytics when timely available. The combination of typical chest pain, risk factors (age, gender, hypertension, hyperlipidemia, family history), and ST-elevations confirms the diagnosis.",
+    "distractors": {
+      "B": "While GERD can cause chest pain, the typical radiation pattern, associated symptoms, risk factors, and ECG changes make MI much more likely",
+      "C": "Panic attacks can mimic MI but typically occur in younger patients without cardiac risk factors and don't have ECG changes or elevated biomarkers",
+      "D": "Musculoskeletal pain is typically positional and reproducible on examination; this patient's presentation is classic for MI",
+      "E": "Observation would be inappropriate for confirmed STEMI; immediate reperfusion therapy is critical to minimize myocardial damage"
+    }
+  },
+  "metadata": {
+    "high_yield": true,
+    "tested_frequency": "very_high",
+    "story_connection": null
+  }
+}

@@ -1,0 +1,173 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://blackstar.game/schemas/patient-case.json",
+  "title": "Blackstar Patient Case",
+  "description": "JSON schema for standardized medical patient case data in Blackstar game",
+  "type": "object",
+  "required": ["id", "specialty", "topic", "difficulty", "vignette", "question", "choices", "explanation", "metadata"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-zA-Z0-9_]+$",
+      "description": "Unique identifier for the case"
+    },
+    "specialty": {
+      "type": "string",
+      "enum": ["Internal Medicine", "Surgery", "Pediatrics", "OB/GYN", "Psychiatry", "Emergency Medicine", "Radiology", "Pathology"],
+      "description": "Medical specialty for this case"
+    },
+    "topic": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Specific medical topic or condition"
+    },
+    "difficulty": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 5,
+      "description": "Difficulty level from 1 (easiest) to 5 (hardest)"
+    },
+    "vignette": {
+      "type": "object",
+      "required": ["demographics", "presentation", "vitals"],
+      "properties": {
+        "demographics": {
+          "type": "string",
+          "pattern": "^A(n)? [0-9]+-year-old (man|woman|boy|girl)",
+          "description": "Patient demographics in NBME format"
+        },
+        "presentation": {
+          "type": "string",
+          "minLength": 10,
+          "description": "Chief complaint and presenting symptoms"
+        },
+        "history": {
+          "type": "string",
+          "description": "Medical history, medications, social history"
+        },
+        "physicalExam": {
+          "type": "string",
+          "description": "Physical examination findings"
+        },
+        "vitals": {
+          "type": "object",
+          "required": ["BP", "HR", "RR", "Temp"],
+          "properties": {
+            "BP": {
+              "type": "string",
+              "pattern": "^[0-9]{2,3}/[0-9]{2,3} mm Hg$",
+              "description": "Blood pressure in mm Hg"
+            },
+            "HR": {
+              "type": "string",
+              "pattern": "^[0-9]{2,3}/min( irregularly irregular)?$",
+              "description": "Heart rate per minute"
+            },
+            "RR": {
+              "type": "string",
+              "pattern": "^[0-9]{1,2}/min$",
+              "description": "Respiratory rate per minute"
+            },
+            "Temp": {
+              "type": "string",
+              "pattern": "^[0-9]{2}\\.[0-9]°C \\([0-9]{2}\\.[0-9]°F\\)$",
+              "description": "Temperature in Celsius and Fahrenheit"
+            },
+            "O2Sat": {
+              "type": "string",
+              "pattern": "^[0-9]{2}% on (room air|[0-9]+L O2)$",
+              "description": "Oxygen saturation"
+            }
+          }
+        },
+        "labs": {
+          "type": "object",
+          "properties": {
+            "formatted": {
+              "type": "string",
+              "description": "Laboratory and imaging results formatted for display"
+            }
+          }
+        }
+      }
+    },
+    "question": {
+      "type": "string",
+      "minLength": 10,
+      "description": "The clinical question being asked"
+    },
+    "choices": {
+      "type": "array",
+      "minItems": 4,
+      "maxItems": 5,
+      "items": {
+        "type": "object",
+        "required": ["id", "text", "correct"],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[A-E]$",
+            "description": "Choice identifier (A, B, C, D, or E)"
+          },
+          "text": {
+            "type": "string",
+            "minLength": 3,
+            "description": "Choice text"
+          },
+          "correct": {
+            "type": "boolean",
+            "description": "Whether this choice is correct"
+          }
+        }
+      },
+      "description": "Answer choices with exactly one correct answer"
+    },
+    "explanation": {
+      "type": "object",
+      "required": ["correct", "concepts"],
+      "properties": {
+        "correct": {
+          "type": "string",
+          "minLength": 20,
+          "description": "Explanation of why the correct answer is right"
+        },
+        "concepts": {
+          "type": "string",
+          "minLength": 10,
+          "description": "Key medical concepts and teaching points"
+        },
+        "distractors": {
+          "type": "object",
+          "patternProperties": {
+            "^[A-E]$": {
+              "type": "string",
+              "minLength": 10,
+              "description": "Explanation of why this distractor is wrong"
+            }
+          },
+          "description": "Explanations for incorrect choices"
+        }
+      }
+    },
+    "metadata": {
+      "type": "object",
+      "required": ["high_yield", "tested_frequency"],
+      "properties": {
+        "high_yield": {
+          "type": "boolean",
+          "description": "Whether this is high-yield for board exams"
+        },
+        "tested_frequency": {
+          "type": "string",
+          "enum": ["very_high", "high", "medium", "low"],
+          "description": "How frequently this topic appears on exams"
+        },
+        "story_connection": {
+          "type": ["string", "null"],
+          "description": "Connection to main story arc, if any"
+        }
+      }
+    }
+  },
+  "additionalProperties": false
+}

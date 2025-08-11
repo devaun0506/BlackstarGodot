@@ -1,0 +1,117 @@
+[gd_scene load_steps=2 format=3 uid="uid://bdn5rwcb7iq1u"]
+
+[ext_resource type="Script" uid="uid://cupmf51qnld5b" path="res://scripts/ui/GameScene.gd" id="1_mtr8k"]
+
+[node name="GameScene" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource("1_mtr8k")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0.05, 0.1, 0.15, 1)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="LeftPanel" type="Panel" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.7
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/LeftPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = -20.0
+offset_bottom = -20.0
+
+[node name="PatientInfo" type="RichTextLabel" parent="HBoxContainer/LeftPanel/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.4
+text = "Patient Information:"
+
+[node name="HSeparator" type="HSeparator" parent="HBoxContainer/LeftPanel/VBoxContainer"]
+layout_mode = 2
+
+[node name="QuestionArea" type="RichTextLabel" parent="HBoxContainer/LeftPanel/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.6
+text = "Current Question:"
+
+[node name="RightPanel" type="Panel" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/RightPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = -20.0
+offset_bottom = -20.0
+
+[node name="Timer" type="Label" parent="HBoxContainer/RightPanel/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Time: 00:00"
+horizontal_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="HBoxContainer/RightPanel/VBoxContainer"]
+layout_mode = 2
+
+[node name="AnswerButtons" type="VBoxContainer" parent="HBoxContainer/RightPanel/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="AnswerA" type="Button" parent="HBoxContainer/RightPanel/VBoxContainer/AnswerButtons"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "A) Answer 1"
+
+[node name="AnswerB" type="Button" parent="HBoxContainer/RightPanel/VBoxContainer/AnswerButtons"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "B) Answer 2"
+
+[node name="AnswerC" type="Button" parent="HBoxContainer/RightPanel/VBoxContainer/AnswerButtons"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "C) Answer 3"
+
+[node name="AnswerD" type="Button" parent="HBoxContainer/RightPanel/VBoxContainer/AnswerButtons"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "D) Answer 4"
+
+[node name="AnswerE" type="Button" parent="HBoxContainer/RightPanel/VBoxContainer/AnswerButtons"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "E) Answer 5"
+
+[node name="HSeparator2" type="HSeparator" parent="HBoxContainer/RightPanel/VBoxContainer"]
+layout_mode = 2
+
+[node name="NextButton" type="Button" parent="HBoxContainer/RightPanel/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Next Patient"

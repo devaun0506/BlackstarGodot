@@ -1,0 +1,45 @@
+{
+  "id": "sample_002",
+  "specialty": "Surgery",
+  "topic": "Acute Appendicitis",
+  "difficulty": 2,
+  "vignette": {
+    "demographics": "A 25-year-old woman",
+    "presentation": "comes to the emergency department because of right lower abdominal pain for the past 8 hours. She reports that the pain initially started around her umbilicus and was crampy in nature, but over the past few hours it has migrated to her right lower quadrant and become constant and more severe. She rates the pain as 7/10 and notes that it is worsened by movement.",
+    "history": "The patient is otherwise healthy with no significant medical history. She reports associated nausea, vomiting, and decreased appetite since the pain began. Her last menstrual period was 2 weeks ago and was normal. She denies any urinary symptoms, diarrhea, or recent travel. She takes no regular medications and has no known drug allergies.",
+    "physicalExam": "Physical examination shows a young woman who appears uncomfortable and prefers to lie still. Abdominal examination reveals focal tenderness and guarding at McBurney's point. Rovsing's sign is positive. There is no rebound tenderness. Bowel sounds are present but diminished. Pelvic examination shows no cervical motion tenderness.",
+    "vitals": {
+      "BP": "118/72 mm Hg",
+      "HR": "102/min",
+      "RR": "18/min",
+      "Temp": "38.8°C (101.8°F)",
+      "O2Sat": "99% on room air"
+    },
+    "labs": {
+      "formatted": "WBC: 12,800/μL with 78% neutrophils\nCRP: 35 mg/L (normal <3)\nUrinalysis: Normal\nβ-hCG: Negative\nCT abdomen/pelvis: Appendiceal wall thickening with periappendiceal fat stranding"
+    }
+  },
+  "question": "Which of the following is the most appropriate next step in management?",
+  "choices": [
+    {"id": "A", "text": "Laparoscopic appendectomy", "correct": true},
+    {"id": "B", "text": "Pelvic ultrasound", "correct": false},
+    {"id": "C", "text": "Antibiotic therapy alone", "correct": false},
+    {"id": "D", "text": "Observation with serial examinations", "correct": false},
+    {"id": "E", "text": "Gastroenteritis treatment", "correct": false}
+  ],
+  "explanation": {
+    "correct": "This patient presents with classic acute appendicitis: periumbilical pain migrating to RLQ, fever, nausea/vomiting, anorexia, McBurney's point tenderness, positive Rovsing's sign, and CT confirmation. Laparoscopic appendectomy is the gold standard treatment for acute appendicitis.",
+    "concepts": "Acute appendicitis diagnosis relies on clinical presentation (pain migration from periumbilical to RLQ), physical exam findings (McBurney's point tenderness, Rovsing's sign), and imaging confirmation. Laparoscopic appendectomy is preferred over open approach due to lower morbidity and faster recovery.",
+    "distractors": {
+      "B": "While ovarian pathology is in the differential for young women with RLQ pain, the negative βhCG, classic appendicitis presentation, and CT findings make appendicitis most likely",
+      "C": "Antibiotic therapy alone may be considered for uncomplicated appendicitis in select cases, but surgical management remains the standard of care",
+      "D": "Observation risks progression to perforation and complications in a patient with clear clinical and radiographic evidence of appendicitis",
+      "E": "Gastroenteritis typically presents with diarrhea and diffuse abdominal pain, not the classic RLQ pain migration seen in appendicitis"
+    }
+  },
+  "metadata": {
+    "high_yield": true,
+    "tested_frequency": "very_high",
+    "story_connection": null
+  }
+}

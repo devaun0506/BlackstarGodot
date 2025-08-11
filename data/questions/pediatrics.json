@@ -1,0 +1,137 @@
+[
+  {
+    "id": "peds_001",
+    "specialty": "Pediatrics",
+    "topic": "Febrile Seizures",
+    "difficulty": 2,
+    "vignette": {
+      "demographics": "A 2-year-old boy",
+      "presentation": "is brought to the emergency department by his parents after having a seizure at home 30 minutes ago. The parents report that he had been fussy and warm for the past day. This morning, his temperature was 39.4°C (103°F), and shortly after, he had a generalized tonic-clonic seizure lasting approximately 2 minutes.",
+      "history": "The child has been healthy with normal development. His immunizations are up to date. He attends daycare where several children have had upper respiratory infections. There is no family history of seizures or epilepsy. This is his first seizure episode.",
+      "physicalExam": "Physical examination shows an alert, interactive toddler who appears well. He has clear rhinorrhea and mild erythema of the throat. Tympanic membranes are erythematous bilaterally. Neurological examination is normal with no focal deficits. He is walking normally and responding appropriately to parents.",
+      "vitals": {
+        "BP": "95/58 mm Hg",
+        "HR": "130/min",
+        "RR": "24/min",
+        "Temp": "38.8°C (101.8°F)",
+        "O2Sat": "99% on room air"
+      },
+      "labs": {
+        "formatted": "Glucose: 95 mg/dL\nSodium: 138 mEq/L\nComplete blood count: Normal\nUrinalysis: Normal"
+      }
+    },
+    "question": "Which of the following is the most appropriate next step in management?",
+    "choices": [
+      {"id": "A", "text": "Discharge home with fever management education", "correct": true},
+      {"id": "B", "text": "Lumbar puncture", "correct": false},
+      {"id": "C", "text": "EEG", "correct": false},
+      {"id": "D", "text": "MRI brain", "correct": false},
+      {"id": "E", "text": "Start prophylactic anticonvulsants", "correct": false}
+    ],
+    "explanation": {
+      "correct": "This is a typical simple febrile seizure in a 2-year-old (age 6 months-5 years, fever >38°C, generalized, <15 minutes, no recurrence in 24h). The child is neurologically normal post-ictally. Discharge with fever management is appropriate.",
+      "concepts": "Simple febrile seizures are benign and common (2-5% of children). Criteria: age 6 months-5 years, fever, generalized, <15 minutes, no focal features, normal post-ictal exam. No workup needed if typical presentation.",
+      "distractors": {
+        "B": "Lumbar puncture is only indicated if signs of meningitis are present or in infants <12 months old; this child appears well with clear URI symptoms",
+        "C": "EEG is not indicated for simple febrile seizures as they do not predict future epilepsy",
+        "D": "MRI is not indicated for simple febrile seizures with normal neurological examination",
+        "E": "Prophylactic anticonvulsants are not recommended for simple febrile seizures due to side effects and limited benefit"
+      }
+    },
+    "metadata": {
+      "high_yield": true,
+      "tested_frequency": "very_high",
+      "story_connection": null
+    }
+  },
+  {
+    "id": "peds_002",
+    "specialty": "Pediatrics",
+    "topic": "Respiratory Syncytial Virus Bronchiolitis",
+    "difficulty": 3,
+    "vignette": {
+      "demographics": "A 4-month-old girl",
+      "presentation": "is brought to the emergency department by her parents because of worsening cough, difficulty feeding, and fast breathing for the past 3 days. She initially had nasal congestion and low-grade fever. Her parents report she is only taking half her usual bottle volume and seems tired after feeding.",
+      "history": "The infant was born at 36 weeks gestation but had no complications and was discharged home after 3 days. She has been healthy since birth. Her 3-year-old brother recently had a cold. She has received her 2-month immunizations but is due for her 4-month vaccines.",
+      "physicalExam": "Physical examination shows an infant in mild respiratory distress with nasal flaring and subcostal retractions. She has clear nasal discharge. Lung examination reveals bilateral expiratory wheeze and fine crackles. Capillary refill is 2 seconds. She is alert and tracking visually.",
+      "vitals": {
+        "BP": "85/50 mm Hg",
+        "HR": "165/min",
+        "RR": "65/min",
+        "Temp": "38.2°C (100.8°F)",
+        "O2Sat": "92% on room air"
+      },
+      "labs": {
+        "formatted": "RSV rapid antigen: Positive\nChest X-ray: Hyperinflation, peribronchial thickening\nNo consolidation or pleural effusion"
+      }
+    },
+    "question": "Which of the following is the most appropriate treatment?",
+    "choices": [
+      {"id": "A", "text": "Supportive care with oxygen and hydration", "correct": true},
+      {"id": "B", "text": "Albuterol nebulizer treatments", "correct": false},
+      {"id": "C", "text": "Oral corticosteroids", "correct": false},
+      {"id": "D", "text": "Ribavirin therapy", "correct": false},
+      {"id": "E", "text": "Azithromycin", "correct": false}
+    ],
+    "explanation": {
+      "correct": "This infant has RSV bronchiolitis. Treatment is primarily supportive with oxygen supplementation for hypoxemia (O2 sat 92%) and ensuring adequate hydration. Most infants recover without specific interventions.",
+      "concepts": "RSV bronchiolitis is the most common cause of hospitalization in infants <1 year. Treatment is supportive. Bronchodilators and steroids are not routinely recommended. Oxygen support is provided for O2 sat <90-92%.",
+      "distractors": {
+        "B": "Albuterol and other bronchodilators have not shown consistent benefit in bronchiolitis and are not routinely recommended",
+        "C": "Corticosteroids are not effective in bronchiolitis and may actually worsen outcomes in some studies",
+        "D": "Ribavirin is rarely used and only considered in severe cases in immunocompromised or high-risk patients",
+        "E": "Bronchiolitis is viral (RSV); antibiotics are not indicated unless secondary bacterial infection is suspected"
+      }
+    },
+    "metadata": {
+      "high_yield": true,
+      "tested_frequency": "high",
+      "story_connection": null
+    }
+  },
+  {
+    "id": "peds_003",
+    "specialty": "Pediatrics",
+    "topic": "Intussusception",
+    "difficulty": 4,
+    "vignette": {
+      "demographics": "A 9-month-old boy",
+      "presentation": "is brought to the emergency department by his parents because of intermittent crying episodes and vomiting for the past 6 hours. The parents describe sudden onset of severe crying where the infant draws his knees to his chest, followed by periods of quiet lethargy. He has vomited 4 times, initially feeding contents and later bilious material.",
+      "history": "The infant has been healthy with normal growth and development. He recently started eating solid foods. He had a viral upper respiratory infection 2 weeks ago but recovered completely. His immunizations are up to date including rotavirus vaccine.",
+      "physicalExam": "Physical examination shows a pale, lethargic infant who appears ill. Between episodes, he seems more comfortable but less interactive than usual. Abdominal examination reveals a palpable, sausage-shaped mass in the right upper quadrant. Bowel sounds are high-pitched. Rectal examination shows mucus with streaks of blood.",
+      "vitals": {
+        "BP": "88/52 mm Hg",
+        "HR": "155/min",
+        "RR": "32/min",
+        "Temp": "37.5°C (99.5°F)",
+        "O2Sat": "98% on room air"
+      },
+      "labs": {
+        "formatted": "Ultrasound abdomen: Target sign and crescent sign consistent with ileocolic intussusception\nNo evidence of perforation"
+      }
+    },
+    "question": "Which of the following is the most appropriate initial treatment?",
+    "choices": [
+      {"id": "A", "text": "Pneumatic reduction enema", "correct": true},
+      {"id": "B", "text": "Immediate surgical exploration", "correct": false},
+      {"id": "C", "text": "IV antibiotics and observation", "correct": false},
+      {"id": "D", "text": "Nasogastric decompression", "correct": false},
+      {"id": "E", "text": "Barium enema", "correct": false}
+    ],
+    "explanation": {
+      "correct": "This infant has classic intussusception with typical triad (colicky pain, palpable mass, bloody stools) and ultrasound confirmation. Pneumatic reduction enema is first-line therapy with high success rate (>90%) when performed early.",
+      "concepts": "Intussusception is most common in infants 6-24 months. Classic triad occurs in only 20-40% but includes colicky abdominal pain, palpable RUQ mass, and bloody stools. Pneumatic or hydrostatic reduction is preferred over surgery initially.",
+      "distractors": {
+        "B": "Surgery is reserved for failed pneumatic reduction, signs of perforation, or peritonitis; should attempt non-operative reduction first",
+        "C": "This is not an infectious process; the infant needs immediate intervention for intussusception, not observation",
+        "D": "NG decompression may help with vomiting but does not address the underlying intussusception",
+        "E": "Pneumatic reduction has replaced barium enema as the preferred method due to lower radiation exposure and similar efficacy"
+      }
+    },
+    "metadata": {
+      "high_yield": true,
+      "tested_frequency": "high",
+      "story_connection": null
+    }
+  }
+]

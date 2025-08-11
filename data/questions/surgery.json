@@ -1,0 +1,137 @@
+[
+  {
+    "id": "surg_001",
+    "specialty": "Surgery",
+    "topic": "Acute Appendicitis",
+    "difficulty": 2,
+    "vignette": {
+      "demographics": "A 24-year-old man",
+      "presentation": "comes to the emergency department because of abdominal pain for the past 8 hours. The pain initially started around his umbilicus and was crampy in nature. Over the past few hours, it has migrated to his right lower quadrant and become more constant and severe. He also reports nausea and has vomited twice.",
+      "history": "The patient was previously healthy with no significant medical history. He denies any recent travel, sick contacts, or changes in bowel habits. He has not taken any medications and has no known drug allergies. He ate normally yesterday with no unusual foods.",
+      "physicalExam": "Physical examination shows a young man who appears uncomfortable and prefers to lie still. Abdominal examination reveals tenderness in the right lower quadrant with guarding. McBurney's point is tender to palpation. Rovsing's sign is positive. Psoas and obturator signs are negative. Bowel sounds are diminished.",
+      "vitals": {
+        "BP": "124/78 mm Hg",
+        "HR": "96/min",
+        "RR": "18/min",
+        "Temp": "38.2°C (100.8°F)",
+        "O2Sat": "98% on room air"
+      },
+      "labs": {
+        "formatted": "WBC: 14,200/μL with 82% neutrophils\nCRP: 48 mg/L (normal <3)\nUrinalysis: Normal\nCT abdomen/pelvis: Appendiceal wall thickening with periappendiceal fat stranding"
+      }
+    },
+    "question": "Which of the following is the most appropriate next step in management?",
+    "choices": [
+      {"id": "A", "text": "Laparoscopic appendectomy", "correct": true},
+      {"id": "B", "text": "Antibiotic therapy alone", "correct": false},
+      {"id": "C", "text": "Observation with serial examinations", "correct": false},
+      {"id": "D", "text": "Upper GI series with small bowel follow-through", "correct": false},
+      {"id": "E", "text": "Colonoscopy", "correct": false}
+    ],
+    "explanation": {
+      "correct": "This patient has classic acute appendicitis with typical presentation (periumbilical pain migrating to RLQ), physical findings (McBurney's point tenderness, Rovsing's sign), and CT confirmation. Laparoscopic appendectomy is the gold standard treatment.",
+      "concepts": "Acute appendicitis diagnosis relies on clinical presentation, physical exam, and imaging. Laparoscopic appendectomy is preferred over open approach due to lower morbidity, faster recovery, and better cosmesis.",
+      "distractors": {
+        "B": "Antibiotic therapy alone may be considered for uncomplicated appendicitis in select cases, but surgical management remains standard of care",
+        "C": "Observation risks progression to perforation and complications in a patient with clear appendicitis",
+        "D": "Upper GI series is not indicated for appendicitis and would delay necessary surgical intervention",
+        "E": "Colonoscopy is not indicated for acute appendicitis and could be dangerous with inflamed appendix"
+      }
+    },
+    "metadata": {
+      "high_yield": true,
+      "tested_frequency": "very_high",
+      "story_connection": null
+    }
+  },
+  {
+    "id": "surg_002",
+    "specialty": "Surgery",
+    "topic": "Small Bowel Obstruction",
+    "difficulty": 4,
+    "vignette": {
+      "demographics": "A 68-year-old woman",
+      "presentation": "is brought to the emergency department because of abdominal pain, nausea, vomiting, and inability to pass gas or stool for the past 18 hours. She describes the pain as crampy and occurring in waves. She has vomited multiple times, initially food contents and now bilious material.",
+      "history": "The patient had a hysterectomy 15 years ago for uterine fibroids. She also had her gallbladder removed laparoscopically 3 years ago. She has a history of hypertension controlled with lisinopril. She denies any recent changes in diet or medications.",
+      "physicalExam": "Physical examination shows a woman in moderate distress. Abdominal examination reveals a distended abdomen with hyperactive, high-pitched bowel sounds. There is diffuse tenderness without rigidity or rebound. No hernias are palpable. Digital rectal examination shows an empty rectum.",
+      "vitals": {
+        "BP": "102/68 mm Hg",
+        "HR": "118/min",
+        "RR": "22/min",
+        "Temp": "37.8°C (100°F)",
+        "O2Sat": "97% on room air"
+      },
+      "labs": {
+        "formatted": "WBC: 11,800/μL\nCreatinine: 1.8 mg/dL (baseline 1.0)\nLactate: 1.8 mmol/L (normal <2)\nCT abdomen/pelvis: Multiple dilated small bowel loops with transition point in mid-ileum, no free air"
+      }
+    },
+    "question": "Which of the following is the most appropriate initial management?",
+    "choices": [
+      {"id": "A", "text": "Nasogastric decompression and IV fluids", "correct": true},
+      {"id": "B", "text": "Immediate exploratory laparotomy", "correct": false},
+      {"id": "C", "text": "Water-soluble contrast study", "correct": false},
+      {"id": "D", "text": "Octreotide administration", "correct": false},
+      {"id": "E", "text": "Colonoscopy", "correct": false}
+    ],
+    "explanation": {
+      "correct": "This patient has small bowel obstruction (SBO) likely from adhesions (prior surgeries). Initial management includes nasogastric decompression to reduce bowel distention and IV fluids for resuscitation and electrolyte correction.",
+      "concepts": "SBO management starts with conservative measures: NG decompression, IV fluids, NPO status. Surgery is indicated for signs of strangulation, perforation, or failure of conservative management after 24-48 hours.",
+      "distractors": {
+        "B": "Immediate surgery is only indicated for signs of strangulation/perforation (high lactate, peritonitis, free air). This patient can try conservative management first",
+        "C": "Water-soluble contrast can be therapeutic but is typically used after initial stabilization and NG decompression",
+        "D": "Octreotide may reduce bowel secretions but is not standard first-line therapy for SBO",
+        "E": "Colonoscopy is contraindicated in bowel obstruction due to risk of perforation"
+      }
+    },
+    "metadata": {
+      "high_yield": true,
+      "tested_frequency": "high",
+      "story_connection": null
+    }
+  },
+  {
+    "id": "surg_003",
+    "specialty": "Surgery",
+    "topic": "Gallbladder Disease",
+    "difficulty": 3,
+    "vignette": {
+      "demographics": "A 45-year-old woman",
+      "presentation": "comes to the emergency department because of severe right upper quadrant pain for the past 6 hours. The pain is constant and radiates to her right shoulder blade. She reports nausea and has vomited twice. She states the pain is similar to previous episodes but much more severe and prolonged.",
+      "history": "The patient has had intermittent right upper quadrant pain after fatty meals for the past 2 years. She is obese with a BMI of 34 kg/m². She has two children and is currently taking oral contraceptive pills. She works as an accountant and denies alcohol or tobacco use.",
+      "physicalExam": "Physical examination shows an obese woman in obvious distress. She has right upper quadrant tenderness with a positive Murphy's sign. No mass is palpable. There is no jaundice or scleral icterus. Bowel sounds are normal. The remainder of the examination is unremarkable.",
+      "vitals": {
+        "BP": "138/85 mm Hg",
+        "HR": "102/min",
+        "RR": "20/min",
+        "Temp": "38.1°C (100.6°F)",
+        "O2Sat": "98% on room air"
+      },
+      "labs": {
+        "formatted": "WBC: 13,500/μL\nTotal bilirubin: 1.8 mg/dL (normal <1.2)\nDirect bilirubin: 1.2 mg/dL\nAST: 85 U/L (normal <40)\nALT: 92 U/L (normal <40)\nUltrasound: Gallbladder wall thickening, pericholecystic fluid, positive sonographic Murphy's sign"
+      }
+    },
+    "question": "Which of the following is the most appropriate management?",
+    "choices": [
+      {"id": "A", "text": "Laparoscopic cholecystectomy within 72 hours", "correct": true},
+      {"id": "B", "text": "ERCP with sphincterotomy", "correct": false},
+      {"id": "C", "text": "Percutaneous cholecystostomy", "correct": false},
+      {"id": "D", "text": "Antibiotic therapy and delayed cholecystectomy", "correct": false},
+      {"id": "E", "text": "MRCP followed by surgery", "correct": false}
+    ],
+    "explanation": {
+      "correct": "This patient has acute cholecystitis (RUQ pain, Murphy's sign, fever, leukocytosis, ultrasound findings). Current guidelines recommend early laparoscopic cholecystectomy within 72 hours for better outcomes and shorter hospital stay.",
+      "concepts": "Acute cholecystitis management has shifted toward early cholecystectomy (within 72 hours) rather than delayed surgery. This approach reduces complications, hospital stay, and healthcare costs while providing better patient outcomes.",
+      "distractors": {
+        "B": "ERCP is indicated for choledocholithiasis but this patient's bilirubin elevation is mild and likely from cholecystitis alone",
+        "C": "Percutaneous cholecystostomy is reserved for critically ill patients who cannot tolerate surgery, not appropriate for this stable patient",
+        "D": "The traditional approach of delayed cholecystectomy (6-8 weeks) is now considered inferior to early surgery",
+        "E": "MRCP is not needed when ultrasound clearly shows cholecystitis; it would only delay necessary surgery"
+      }
+    },
+    "metadata": {
+      "high_yield": true,
+      "tested_frequency": "high",
+      "story_connection": null
+    }
+  }
+]
