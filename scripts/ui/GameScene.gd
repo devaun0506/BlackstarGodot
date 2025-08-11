@@ -606,35 +606,6 @@ func _on_relationship_changed(character_name: String, relationship_level: int) -
 	"""Handle character relationship change"""
 	print("GameScene: Relationship with %s changed to %d" % [character_name, relationship_level])
 
-# Enhanced next patient flow
-func _on_next_pressed() -> void:
-	"""Handle next button press with enhanced flow"""
-	print("GameScene: Next patient requested")
-	
-	# Check if we should show between patients sequence
-	var should_show_between_patients = should_trigger_between_patients()
-	
-	if should_show_between_patients and between_patients_ui:
-		# Get current game state for between patients
-		var patients_seen = 0
-		var momentum = 0.5
-		
-		if ShiftManager:
-			var stats = ShiftManager.get_shift_statistics()
-			patients_seen = stats.get("patients_treated", 0)
-		
-		if game_flow_manager:
-			momentum = game_flow_manager.get_coffee_momentum()
-		
-		# Show between patients sequence
-		between_patients_ui.show_between_patients(patients_seen, momentum)
-	else:
-		# Load next patient immediately
-		if ShiftManager and ShiftManager.current_shift_active:
-			ShiftManager.load_next_patient()
-	
-	if next_button:
-		next_button.disabled = true
 
 func should_trigger_between_patients() -> bool:
 	"""Determine if we should show between patients sequence"""
