@@ -758,8 +758,8 @@ func create_coffee_ring_stain(pos: Vector2) -> Control:
 	# Make it circular
 	var style = StyleBoxFlat.new()
 	style.bg_color = stain.color
-	style.corner_radius_top_left = style.corner_radius_top_right = int(stain.size.x / 2)
-	style.corner_radius_bottom_left = style.corner_radius_bottom_right = int(stain.size.x / 2)
+	style.corner_radius_top_left = style.corner_radius_top_right = int(stain.size.x / 2.0)
+	style.corner_radius_bottom_left = style.corner_radius_bottom_right = int(stain.size.x / 2.0)
 	
 	stain.add_theme_stylebox_override("panel", style)
 	

@@ -574,8 +574,8 @@ func create_coffee_stain() -> Control:
 	# Create coffee ring style
 	var style = StyleBoxFlat.new()
 	style.bg_color = Color(MedicalColors.COFFEE_BROWN.r, MedicalColors.COFFEE_BROWN.g, MedicalColors.COFFEE_BROWN.b, 0.15 + randf() * 0.1)
-	style.corner_radius_top_left = style.corner_radius_top_right = int(stain_size.x / 2)
-	style.corner_radius_bottom_left = style.corner_radius_bottom_right = int(stain_size.x / 2)
+	style.corner_radius_top_left = style.corner_radius_top_right = int(stain_size.x / 2.0)
+	style.corner_radius_bottom_left = style.corner_radius_bottom_right = int(stain_size.x / 2.0)
 	
 	# Occasionally add ring effect
 	if randf() < 0.4:

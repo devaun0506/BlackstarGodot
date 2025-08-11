@@ -389,8 +389,8 @@ func add_coffee_stain(position: Vector2, intensity: float):
 	# Make it circular by setting corner radius
 	var style = StyleBoxFlat.new()
 	style.bg_color = stain.color
-	style.corner_radius_top_left = style.corner_radius_top_right = int(stain.size.x / 2)
-	style.corner_radius_bottom_left = style.corner_radius_bottom_right = int(stain.size.x / 2)
+	style.corner_radius_top_left = style.corner_radius_top_right = int(stain.size.x / 2.0)
+	style.corner_radius_bottom_left = style.corner_radius_bottom_right = int(stain.size.x / 2.0)
 	stain.add_theme_stylebox_override("panel", style)
 	
 	coffee_stains.add_child(stain)

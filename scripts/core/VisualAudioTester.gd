@@ -421,7 +421,7 @@ func test_performance_benchmarks() -> void:
 	for i in range(100):
 		var button = Button.new()
 		button.text = "Test Button %d" % i
-		button.position = Vector2(i % 10 * 100, i / 10 * 50)
+		button.position = Vector2(i % 10 * 100, int(i / 10) * 50)
 		test_container.add_child(button)
 	
 	var creation_time = Time.get_ticks_msec() - start_time

@@ -15,6 +15,10 @@ const STORY_DATA_PATH = "res://data/story/"
 var available_cases: Array[String] = []
 var loaded_patients: Array[Dictionary] = []
 
+# Performance cache for frequently accessed patient data
+var _patient_data_cache: Dictionary = {}
+var _max_cache_size: int = 20  # Limit cache to prevent memory bloat
+
 func _ready() -> void:
 	# Scan for available patient case files
 	_scan_patient_files()
@@ -62,7 +66,15 @@ func load_patient_queue(count: int = 10) -> Array[Dictionary]:
 	return patient_queue
 
 func load_patient_case(filename: String) -> Dictionary:
-	"""Load a specific patient case from a JSON file"""
+	"""Load a specific patient case from a JSON file - with caching for performance"""
+	# Check cache first
+	if _patient_data_cache.has(filename):
+		var cached_data = _patient_data_cache[filename]
+		var patient_name = _extract_patient_name(cached_data)
+		print("Loaded patient case from cache: ", patient_name)
+		patient_loaded.emit(cached_data)
+		return cached_data
+	
 	var file_path = PATIENT_DATA_PATH + filename
 	var file = FileAccess.open(file_path, FileAccess.READ)
 	
@@ -100,10 +112,23 @@ func load_patient_case(filename: String) -> Dictionary:
 		push_error("PatientLoader: Invalid patient data in file: " + filename)
 		return {}
 	
+	# Cache the loaded data (with size limit)
+	_cache_patient_data(filename, patient_data)
+	
 	var patient_name = _extract_patient_name(patient_data)
 	print("Loaded patient case: ", patient_name)
 	patient_loaded.emit(patient_data)
 	return patient_data
+
+func _cache_patient_data(filename: String, data: Dictionary) -> void:
+	"""Cache patient data with LRU-style eviction"""
+	# If cache is full, remove the first (oldest) entry
+	if _patient_data_cache.size() >= _max_cache_size:
+		var keys = _patient_data_cache.keys()
+		if keys.size() > 0:
+			_patient_data_cache.erase(keys[0])
+	
+	_patient_data_cache[filename] = data.duplicate(true)
 
 func _validate_patient_data(data: Dictionary) -> bool:
 	"""Validate that patient data has required fields"""

@@ -16,6 +16,10 @@ var total_time: float = 0.0
 var time_remaining: float = 0.0
 var update_interval: float = 0.5
 
+# Performance optimization: reduce signal emission frequency
+var _last_emitted_time: float = 0.0
+var _time_emission_threshold: float = 0.1  # Only emit if time changed by at least 0.1s
+
 # Internal timer
 var timer: Timer
 
@@ -146,14 +150,14 @@ func get_progress_percentage() -> float:
 func format_time(seconds: float) -> String:
 	"""Format seconds into MM:SS format"""
 	var total_seconds_int = int(seconds)
-	var minutes = total_seconds_int / 60
+	var minutes = int(total_seconds_int // 60)
 	var remaining_seconds = total_seconds_int % 60
 	return "%02d:%02d" % [minutes, remaining_seconds]
 
 func format_time_with_decimals(seconds: float) -> String:
 	"""Format seconds into MM:SS.D format"""
 	var total_seconds_int = int(seconds)
-	var minutes = total_seconds_int / 60
+	var minutes = int(total_seconds_int // 60)
 	var remaining_seconds = fmod(seconds, 60.0)
 	return "%02d:%04.1f" % [minutes, remaining_seconds]
 
@@ -192,7 +196,7 @@ func should_flash_timer() -> bool:
 
 # Internal callbacks
 func _on_timer_timeout() -> void:
-	"""Handle timer update ticks"""
+	"""Handle timer update ticks - optimized signal emission"""
 	if not timer_active or timer_paused_state:
 		return
 	
@@ -200,8 +204,10 @@ func _on_timer_timeout() -> void:
 	time_remaining -= update_interval
 	time_remaining = max(time_remaining, 0.0)
 	
-	# Emit update signal
-	time_updated.emit(time_remaining)
+	# Only emit signal if time changed significantly (reduces signal overhead)
+	if abs(time_remaining - _last_emitted_time) >= _time_emission_threshold or time_remaining <= 0.0:
+		time_updated.emit(time_remaining)
+		_last_emitted_time = time_remaining
 	
 	# Check if time expired
 	if time_remaining <= 0.0:

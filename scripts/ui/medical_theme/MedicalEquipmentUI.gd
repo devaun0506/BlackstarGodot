@@ -779,7 +779,7 @@ func update_timer_display(time_remaining: float, max_time: float):
 func format_timer_display(time_seconds: float) -> String:
 	"""Format time for medical equipment display"""
 	
-	var minutes = int(time_seconds) / 60
+	var minutes = int(time_seconds) // 60
 	var seconds = int(time_seconds) % 60
 	return "%02d:%02d" % [minutes, seconds]
 

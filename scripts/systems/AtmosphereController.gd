@@ -110,7 +110,6 @@ func setup_default_atmosphere() -> void:
 func set_atmosphere(atmosphere_type: AtmosphereType, intensity: float) -> void:
 	"""Set the overall medical atmosphere"""
 	
-	var old_atmosphere = current_atmosphere
 	current_atmosphere = atmosphere_type
 	intensity_level = clamp(intensity, 0.0, 1.0)
 	
