@@ -131,24 +131,29 @@ static func get_label_font_config() -> Dictionary:
 		"line_height": UI_LINE_HEIGHT
 	}
 
-# Utility function to apply font configuration to a Label node
-static func apply_font_config(label: Label, config: Dictionary) -> void:
-	"""Apply font configuration to a Label node"""
-	if label == null:
+# Utility function to apply font configuration to Label or Button nodes
+static func apply_font_config(node: Control, config: Dictionary) -> void:
+	"""Apply font configuration to a Label or Button node"""
+	if node == null:
+		return
+	
+	# Verify node type supports font theming
+	if not (node is Label or node is Button):
+		push_error("MedicalFont: apply_font_config() only supports Label and Button nodes, got: " + str(node.get_class()))
 		return
 	
 	# Apply font size
 	if config.has("size"):
-		label.add_theme_font_size_override("font_size", config.size)
+		node.add_theme_font_size_override("font_size", config.size)
 	
 	# Apply font color
 	if config.has("font_color"):
-		label.add_theme_color_override("font_color", config.font_color)
+		node.add_theme_color_override("font_color", config.font_color)
 	
 	# Apply outline
 	if config.has("outline_size") and config.has("outline_color"):
-		label.add_theme_constant_override("outline_size", int(config.outline_size))
-		label.add_theme_color_override("font_outline_color", config.outline_color)
+		node.add_theme_constant_override("outline_size", int(config.outline_size))
+		node.add_theme_color_override("font_outline_color", config.outline_color)
 
 # Create medical document-style text formatting
 static func format_patient_demographics(text: String) -> String:

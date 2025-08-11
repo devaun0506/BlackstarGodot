@@ -48,9 +48,17 @@ func _connect_scene_signals() -> void:
 	if not current_scene_instance:
 		return
 	
-	# Menu scene signals
-	if current_scene_instance.has_signal("start_game_requested"):
+	# Medical menu scene signals
+	if current_scene_instance.has_signal("start_shift_requested"):
+		current_scene_instance.start_shift_requested.connect(_on_start_shift_requested)
+	elif current_scene_instance.has_signal("start_game_requested"):
+		# Fallback for compatibility
 		current_scene_instance.start_game_requested.connect(_on_start_game_requested)
+	
+	if current_scene_instance.has_signal("settings_requested"):
+		current_scene_instance.settings_requested.connect(_on_settings_requested)
+	if current_scene_instance.has_signal("feedback_requested"):
+		current_scene_instance.feedback_requested.connect(_on_feedback_requested)
 	if current_scene_instance.has_signal("quit_requested"):
 		current_scene_instance.quit_requested.connect(_on_quit_requested)
 	
@@ -60,16 +68,16 @@ func _connect_scene_signals() -> void:
 	if current_scene_instance.has_signal("menu_requested"):
 		current_scene_instance.menu_requested.connect(_on_menu_requested)
 
-func _on_start_game_requested() -> void:
-	"""Handle start game request from menu with enhanced flow"""
-	print("Main: Starting enhanced medical emergency department experience...")
+func _on_start_shift_requested() -> void:
+	"""Handle start shift request from medical menu"""
+	print("Main: Starting medical emergency department shift...")
 	change_to_scene(GAME_SCENE)
 	
-	# Wait for scene to fully load and initialize enhanced systems
+	# Wait for scene to fully load and initialize medical systems
 	await get_tree().process_frame
-	await get_tree().process_frame  # Extra frame for system initialization
+	await get_tree().process_frame  # Extra frame for medical system initialization
 	
-	# Start enhanced game flow
+	# Start medical shift flow
 	if current_scene_instance and current_scene_instance.has_method("start_new_shift"):
 		# Use the enhanced game scene start method
 		current_scene_instance.start_new_shift()
@@ -77,7 +85,27 @@ func _on_start_game_requested() -> void:
 		# Fallback to direct shift manager start
 		ShiftManager.start_new_shift()
 	else:
-		push_error("Main: Cannot start new shift - Enhanced systems not available")
+		push_error("Main: Cannot start new shift - Medical systems not available")
+
+func _on_start_game_requested() -> void:
+	"""Handle legacy start game request - redirects to shift start"""
+	print("Main: Legacy start game request - redirecting to medical shift start")
+	_on_start_shift_requested()
+
+func _on_settings_requested() -> void:
+	"""Handle settings request from medical menu"""
+	print("Main: Settings requested from medical menu")
+	# Open settings using global settings menu
+	if Globals and Globals.has_method("open_settings_menu"):
+		Globals.open_settings_menu()
+	else:
+		push_warning("Main: Settings menu not available")
+
+func _on_feedback_requested() -> void:
+	"""Handle feedback request from medical menu"""
+	print("Main: Feedback requested from medical menu")
+	# Feedback functionality is handled by the menu scene itself
+	# This is just for logging and potential additional actions
 
 func _on_quit_requested() -> void:
 	"""Handle quit request"""
@@ -86,8 +114,8 @@ func _on_quit_requested() -> void:
 
 func _on_restart_requested() -> void:
 	"""Handle restart request from results"""
-	print("Restarting game...")
-	_on_start_game_requested()
+	print("Restarting medical shift...")
+	_on_start_shift_requested()
 
 func _on_menu_requested() -> void:
 	"""Handle return to menu request"""

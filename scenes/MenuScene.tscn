@@ -1,6 +1,14 @@
-[gd_scene load_steps=2 format=3 uid="uid://cvn7o7b8ycr4s"]
+[gd_scene load_steps=3 format=3 uid="uid://cvn7o7b8ycr4s"]
 
 [ext_resource type="Script" uid="uid://xiym0mimhg5b" path="res://scripts/ui/MenuScene.gd" id="1_pxm8j"]
+[ext_resource type="Shader" path="res://scripts/shaders/FluorescentFlicker.gdshader" id="2_fluorescent"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1"]
+shader = ExtResource("2_fluorescent")
+shader_parameter/flicker_intensity = 0.2
+shader_parameter/flicker_speed = 2.5
+shader_parameter/base_brightness = 0.92
+shader_parameter/fluorescent_tint = Vector3(0.96, 0.96, 0.94)
 
 [node name="MenuScene" type="Control"]
 layout_mode = 3
@@ -9,45 +17,102 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource("1_pxm8j")
 
-[node name="Background" type="ColorRect" parent="."]
+[node name="BackgroundPanel" type="Panel" parent="."]
+unique_name_in_owner = true
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-color = Color(0.1, 0.15, 0.2, 1)
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="MedicalOverlay" type="ColorRect" parent="."]
+unique_name_in_owner = true
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0.98, 0.96, 0.91, 0.1)
+material = SubResource("ShaderMaterial_1")
+
+[node name="MainContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -150.0
-offset_top = -100.0
-offset_right = 150.0
-offset_bottom = 100.0
+offset_left = -200.0
+offset_top = -180.0
+offset_right = 200.0
+offset_bottom = 180.0
 
-[node name="Title" type="Label" parent="VBoxContainer"]
+[node name="HeaderSection" type="VBoxContainer" parent="MainContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TitleLabel" type="Label" parent="MainContainer/HeaderSection"]
+unique_name_in_owner = true
 layout_mode = 2
 text = "BLACKSTAR"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="HSeparator" type="HSeparator" parent="VBoxContainer"]
-layout_mode = 2
-
-[node name="StartButton" type="Button" parent="VBoxContainer"]
+[node name="SubtitleLabel" type="Label" parent="MainContainer/HeaderSection"]
 unique_name_in_owner = true
 layout_mode = 2
-text = "Start Shift"
+text = "Emergency Department Simulation"
+horizontal_alignment = 1
 
-[node name="SettingsButton" type="Button" parent="VBoxContainer"]
+[node name="HSeparator" type="HSeparator" parent="MainContainer"]
+layout_mode = 2
+
+[node name="ButtonSection" type="VBoxContainer" parent="MainContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="StartShiftButton" type="Button" parent="MainContainer/ButtonSection"]
 unique_name_in_owner = true
 layout_mode = 2
-text = "Settings"
+size_flags_horizontal = 3
+text = "► START SHIFT"
 
-[node name="QuitButton" type="Button" parent="VBoxContainer"]
+[node name="HSeparator2" type="HSeparator" parent="MainContainer/ButtonSection"]
+layout_mode = 2
+
+[node name="SettingsButton" type="Button" parent="MainContainer/ButtonSection"]
 unique_name_in_owner = true
 layout_mode = 2
-text = "Quit"
+size_flags_horizontal = 3
+text = "⚙ SETTINGS"
+
+[node name="FeedbackButton" type="Button" parent="MainContainer/ButtonSection"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "✉ FEEDBACK"
+
+[node name="HSeparator3" type="HSeparator" parent="MainContainer/ButtonSection"]
+layout_mode = 2
+
+[node name="QuitButton" type="Button" parent="MainContainer/ButtonSection"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "✕ QUIT"
+
+[node name="FooterSection" type="VBoxContainer" parent="MainContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HSeparator4" type="HSeparator" parent="MainContainer/FooterSection"]
+layout_mode = 2
+
+[node name="ContextLabel" type="Label" parent="MainContainer/FooterSection"]
+layout_mode = 2
+text = "Night Shift • Emergency Department"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="InstructionLabel" type="Label" parent="MainContainer/FooterSection"]
+layout_mode = 2
+text = "Begin your shift to start treating patients"
+horizontal_alignment = 1

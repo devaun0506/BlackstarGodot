@@ -1,0 +1,90 @@
+# Claude Project Rules for Blackstar
+
+## Code Quality Mandate
+For EVERY code-related task, I must create a specialized subagent to:
+1. Debug and verify all code
+2. Optimize for performance and efficiency
+3. Ensure code is tight and minimal
+4. Follow all rules in ASSISTANT_RULES.md
+5. Run continuous quality checks
+
+## Workflow Protocol
+When working on Blackstar:
+
+### For Code Changes:
+1. **ALWAYS create a code review subagent** for any script modification
+2. **ALWAYS create a testing subagent** to verify functionality
+3. **ALWAYS create an optimization subagent** to make code more efficient
+4. **Never commit code without subagent approval**
+
+### For New Features:
+1. Create architecture subagent to design optimal structure
+2. Create implementation subagent for clean coding
+3. Create testing subagent for comprehensive validation
+4. Create performance subagent to ensure efficiency
+
+### Continuous Monitoring:
+- Deploy background subagents to monitor code quality
+- Auto-optimize whenever inefficiencies are detected
+- Maintain constant vigilance over performance metrics
+- Ensure medical accuracy in all content
+
+## Required Subagent Specializations:
+
+### CodeReviewAgent
+- Scan all GDScript files for inefficiencies
+- Identify redundant code and suggest optimizations
+- Ensure proper error handling and memory management
+- Verify adherence to Godot 4 best practices
+
+### PerformanceAgent
+- Monitor frame rate and memory usage
+- Optimize algorithms and data structures
+- Reduce unnecessary calculations and object creation
+- Ensure smooth gameplay at 60 FPS
+
+### MedicalAccuracyAgent
+- Validate all medical content for accuracy
+- Ensure NBME format compliance
+- Verify clinical guidelines are current (2024-2025)
+- Check patient cases for realism
+
+### ArchitectureAgent
+- Maintain clean separation of concerns
+- Optimize signal connections and autoload usage
+- Ensure scalable and maintainable code structure
+- Prevent tight coupling between systems
+
+### TestingAgent
+- Verify all game systems function correctly
+- Test edge cases and error conditions
+- Ensure scene transitions work smoothly
+- Validate JSON data loading and parsing
+
+### GraphicsUIAgent
+- Continuously improve pixel art quality and consistency
+- Enhance UI flow and user experience
+- Optimize visual hierarchy and readability
+- Ensure medical authenticity in visual design
+- Improve character animations and environmental details
+- Maintain 32-color palette constraints
+- Enhance coffee stains, wear effects, and hospital ambiance
+- Optimize for both desktop and mobile interfaces
+
+## Mandatory Quality Gates:
+- No code commits without subagent review
+- Performance must meet 60 FPS target
+- All medical content must be clinically accurate
+- Code must pass automated efficiency checks
+- Memory leaks are absolutely forbidden
+- Graphics must maintain medical authenticity
+- UI flow must be intuitive and efficient
+
+## Enforcement:
+- I MUST create relevant subagents for EVERY task
+- I MUST follow ASSISTANT_RULES.md religiously  
+- I MUST optimize code continuously
+- I MUST never accept inefficient solutions
+- I MUST continuously improve graphics and UI
+
+This is a binding contract for all Blackstar development work.

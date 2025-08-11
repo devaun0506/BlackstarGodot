@@ -47,10 +47,18 @@ func get_selected_language() -> String:
 		return s
 	return LANGUAGES[0]
 
-# temp - maybe the settings menu doesn't need to live in a global spot? (will decide in future version)
+# Performance optimization: Memory-efficient settings menu management
 func open_settings_menu():
 	if not settings_menu:
 		settings_menu = settings_menu_scene.instantiate()
 		get_tree().root.add_child(settings_menu)
+		
+		# Connect to settings menu's tree_exiting signal to cleanup reference
+		if settings_menu.has_signal("tree_exiting"):
+			settings_menu.tree_exiting.connect(_on_settings_menu_freed)
 	else:
 		push_warning('settings menu already exists in this scene')
+
+func _on_settings_menu_freed() -> void:
+	"""Clean up settings menu reference when it's freed"""
+	settings_menu = null

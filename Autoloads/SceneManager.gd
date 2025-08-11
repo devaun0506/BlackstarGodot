@@ -46,6 +46,10 @@ signal _content_failed_to_load(content_path:String)	## internal - triggered when
 
 var _loading_screen_scene:PackedScene = preload("res://Menus/loading_canvass.tscn")	## reference to loading screen PackedScene, if you don't want the loading screen to ALWAYS be on top and instead want more granular control, instead preload loading_screen and then use the signals above to reposition nodes as needed
 var _loading_screen:LoadingScreen	## internal - reference to loading screen instance
+
+# Performance optimization: Object pooling for loading screens
+var _loading_screen_pool: Array[LoadingScreen] = []
+const MAX_POOLED_LOADING_SCREENS = 3
 var _transition:String	## internal - transition being used for current load
 var _zelda_transition_direction:Vector2	## internal - direction of zelda transition (should only be passed Vector2.UP/RIGHT/DOWN/LEFT) Is passed in when calling [code]swap_scenes_zelda()[/code]
 var _content_path:String	## internal - stores the path to the asset SceneManager is trying to load
@@ -83,9 +87,30 @@ func _add_loading_screen(transition_type:String="fade_to_black"):
 	# An alternative would be to store strating animations in a dictionary and swap them for the animation name
 	# it removes this one-off, but adds a step elsewhere - all about preference.
 	_transition = "no_to_transition" if transition_type == "no_transition" else transition_type
-	_loading_screen = _loading_screen_scene.instantiate() as LoadingScreen
+	
+	# Performance optimization: Use object pooling for loading screens
+	_loading_screen = _get_pooled_loading_screen()
 	get_tree().root.add_child(_loading_screen)
 	_loading_screen.start_transition(_transition)
+
+func _get_pooled_loading_screen() -> LoadingScreen:
+	"""Get a loading screen from the pool or create a new one"""
+	if _loading_screen_pool.size() > 0:
+		return _loading_screen_pool.pop_back()
+	else:
+		return _loading_screen_scene.instantiate() as LoadingScreen
+
+func _return_loading_screen_to_pool(loading_screen: LoadingScreen) -> void:
+	"""Return a loading screen to the pool for reuse"""
+	if _loading_screen_pool.size() < MAX_POOLED_LOADING_SCREENS:
+		# Reset the loading screen state
+		loading_screen.get_parent()?.remove_child(loading_screen)
+		loading_screen.progress_bar.visible = false
+		loading_screen.progress_bar.value = 0
+		_loading_screen_pool.push_back(loading_screen)
+	else:
+		# Pool is full, just free the loading screen
+		loading_screen.queue_free()
 	
 ## This is likely the most common public method. It's used to change between two scenes (assets)[br][br]
 ## [b][color=plum]scene_to_load[/color][/b] - [String] path to the resource you'd like to load[br]	
@@ -145,7 +170,7 @@ func _load_content(content_path:String) -> void:
 		return 		
 	
 	_load_progress_timer = Timer.new()
-	_load_progress_timer.wait_time = 0.1
+	_load_progress_timer.wait_time = 0.016  # ~60 FPS for smoother updates
 	_load_progress_timer.timeout.connect(_monitor_load_status)
 	
 	get_tree().root.add_child(_load_progress_timer)		# NEW > insert loading bar into?
