@@ -180,7 +180,7 @@ func get_previous_scene_path() -> String:
 # Utility functions
 func format_time_mmss(seconds: float) -> String:
 	"""Format time as MM:SS"""
-	var minutes = int(seconds) // 60
+	var minutes = int(seconds / 60.0)
 	var secs = int(seconds) % 60
 	return "%02d:%02d" % [minutes, secs]
 
@@ -197,7 +197,7 @@ func format_large_number(number: int) -> String:
 		return str_num
 	
 	# Pre-calculate result size to avoid reallocations
-	var comma_count = (str_length - 1) // 3
+	var comma_count = int((str_length - 1) / 3.0)
 	var result_length = str_length + comma_count
 	var result_chars = []
 	result_chars.resize(result_length)

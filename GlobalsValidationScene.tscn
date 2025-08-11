@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bfr0v7xrq2h2e"]
+
+[ext_resource type="Script" path="res://GlobalsValidationTest.gd" id="1_6kxl5"]
+
+[node name="GlobalsValidationScene" type="Node"]
+script = ExtResource("1_6kxl5")
